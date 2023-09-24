@@ -22,6 +22,12 @@ final class CNButton: UIButton {
         }
     }
     
+    override var isEnabled: Bool {
+        didSet {
+            setupTypeProperties()
+        }
+    }
+    
     // MARK: - INITIALIZERS
     
     init(buttonType: CNButtonType = .primary) {
@@ -59,8 +65,8 @@ final class CNButton: UIButton {
     }
     
     private func setupPrimaryButton() {
-        setTitleColor(.txtSecondary, for: .normal)
-        backgroundColor = .bgLight
+        setTitleColor(isEnabled ? .txtSecondary : .txtTertiary, for: .normal)
+        backgroundColor = isEnabled ? .bgLight: .bgDisable
     }
     
     private func setupSecondaryButton() {
@@ -69,5 +75,4 @@ final class CNButton: UIButton {
         layer.borderColor = UIColor.bgLight.cgColor
         layer.borderWidth = 1
     }
-    
 }

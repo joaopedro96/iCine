@@ -9,6 +9,10 @@ import Foundation
 
 extension CNFlowController: CNOnboardingViewControllerDelegate {
     func goToLoginScene() {
-        print("sign in tapped")
+        let viewController = factory.makeLoginViewController()
+        viewController.delegate = self
+        rootNavigation?.pushViewController(viewController, animated: true)
     }
 }
+
+extension CNFlowController: CNLoginViewControllerDelegate { }

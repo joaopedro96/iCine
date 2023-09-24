@@ -19,6 +19,18 @@ extension UIImage {
         return initialize(with: "iCineIcon")
     }
     
+    class var eyeIcon: UIImage {
+        return initializeSystemIcon(with: "eye.fill")
+    }
+    
+    class var leftArrowIcon: UIImage {
+        return initialize(with: "leftArrow")
+    }
+    
+    class var slashedEyeIcon: UIImage {
+        return initializeSystemIcon(with: "eye.slash.fill")
+    }
+    
     // MARK: - ONBOARDING
     
     class var onboardingPoster: UIImage {
@@ -28,6 +40,10 @@ extension UIImage {
     // MARK: - INITIALIZERS
     
     fileprivate class func initialize(with name: String) -> UIImage {
-        return UIImage(named: name, in: Bundle.main, compatibleWith: nil) ?? UIImage()
+        return UIImage(named: name, in: Bundle.main, compatibleWith: nil)?.withRenderingMode(.alwaysOriginal) ?? UIImage()
+    }
+    
+    fileprivate class func initializeSystemIcon(with systemName: String) -> UIImage {
+        return UIImage(systemName: systemName)?.withRenderingMode(.alwaysOriginal) ?? UIImage()
     }
 }

@@ -15,8 +15,30 @@ extension UIColor {
         return initialize(with: "bgDark")
     }
     
+    class var bgDarkGrey: UIColor {
+        return initialize(with: "bgDarkGrey")
+    }
+    
+    class var bgDisable: UIColor {
+        return initialize(with: "bgDisable")
+    }
+    
     class var bgLight: UIColor {
         return initialize(with: "bgLight")
+    }
+    
+    class var bgLightGrey: UIColor {
+        return initialize(with: "bgLightGrey")
+    }
+    
+    // MARK: - BORDER
+    
+    class var borderLight: UIColor {
+        return initialize(with: "borderLight")
+    }
+    
+    class var borderLightGrey: UIColor {
+        return initialize(with: "borderLightGrey")
     }
     
     // MARK: - TEXT
@@ -27,6 +49,10 @@ extension UIColor {
     
     class var txtSecondary: UIColor {
         return initialize(with: "txtSecondary")
+    }
+    
+    class var txtTertiary: UIColor {
+        return initialize(with: "txtTertiary")
     }
     
     // MARK: - INITIALIZERS

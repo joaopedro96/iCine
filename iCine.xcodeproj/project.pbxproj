@@ -16,6 +16,13 @@
 		CF53C22D2ABF553400E6C8A6 /* CNOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C22C2ABF553400E6C8A6 /* CNOnboardingViewModel.swift */; };
 		CF53C22F2ABF554B00E6C8A6 /* CNOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C22E2ABF554B00E6C8A6 /* CNOnboardingView.swift */; };
 		CF53C2322ABF55F900E6C8A6 /* CNOnboardingViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C2312ABF55F900E6C8A6 /* CNOnboardingViewState.swift */; };
+		CF61A79B2AC0A359004B1D9F /* CNLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A79A2AC0A359004B1D9F /* CNLoginViewController.swift */; };
+		CF61A79D2AC0A3F5004B1D9F /* CNLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A79C2AC0A3F5004B1D9F /* CNLoginViewModel.swift */; };
+		CF61A79F2AC0A3FC004B1D9F /* CNLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A79E2AC0A3FC004B1D9F /* CNLoginView.swift */; };
+		CF61A7A12AC0A404004B1D9F /* CNLoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A02AC0A404004B1D9F /* CNLoginViewState.swift */; };
+		CF61A7A42AC0A868004B1D9F /* CNLoginHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A32AC0A868004B1D9F /* CNLoginHeaderSectionView.swift */; };
+		CF61A7A82AC0A8D4004B1D9F /* CNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A72AC0A8D4004B1D9F /* CNTextField.swift */; };
+		CF61A7AA2AC0C31E004B1D9F /* CNLoginFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A92AC0C31E004B1D9F /* CNLoginFooterSectionView.swift */; };
 		CFA9FEB32ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB22ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift */; };
 		CFA9FEB62ABF642B0032555C /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB52ABF642B0032555C /* UIImageExtensions.swift */; };
 		CFA9FEB82ABF67680032555C /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB72ABF67680032555C /* UIColorExtensions.swift */; };
@@ -43,6 +50,13 @@
 		CF53C22C2ABF553400E6C8A6 /* CNOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingViewModel.swift; sourceTree = "<group>"; };
 		CF53C22E2ABF554B00E6C8A6 /* CNOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingView.swift; sourceTree = "<group>"; };
 		CF53C2312ABF55F900E6C8A6 /* CNOnboardingViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingViewState.swift; sourceTree = "<group>"; };
+		CF61A79A2AC0A359004B1D9F /* CNLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginViewController.swift; sourceTree = "<group>"; };
+		CF61A79C2AC0A3F5004B1D9F /* CNLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginViewModel.swift; sourceTree = "<group>"; };
+		CF61A79E2AC0A3FC004B1D9F /* CNLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginView.swift; sourceTree = "<group>"; };
+		CF61A7A02AC0A404004B1D9F /* CNLoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginViewState.swift; sourceTree = "<group>"; };
+		CF61A7A32AC0A868004B1D9F /* CNLoginHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginHeaderSectionView.swift; sourceTree = "<group>"; };
+		CF61A7A72AC0A8D4004B1D9F /* CNTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNTextField.swift; sourceTree = "<group>"; };
+		CF61A7A92AC0C31E004B1D9F /* CNLoginFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginFooterSectionView.swift; sourceTree = "<group>"; };
 		CFA9FEB22ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingBackgroundSectionView.swift; sourceTree = "<group>"; };
 		CFA9FEB52ABF642B0032555C /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		CFA9FEB72ABF67680032555C /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
@@ -147,18 +161,11 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		CF53C2282ABF545000E6C8A6 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		CF53C2292ABF546A00E6C8A6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				CF53C2272ABF544800E6C8A6 /* Onboarding */,
-				CF53C2282ABF545000E6C8A6 /* Login */,
+				CF61A7992AC0A315004B1D9F /* Login */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -171,6 +178,43 @@
 				CFA9FEC22ABFBA170032555C /* CNOnboardingFooterSectionView.swift */,
 			);
 			path = ViewSections;
+			sourceTree = "<group>";
+		};
+		CF61A7992AC0A315004B1D9F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CF61A79A2AC0A359004B1D9F /* CNLoginViewController.swift */,
+				CF61A79C2AC0A3F5004B1D9F /* CNLoginViewModel.swift */,
+				CF61A7A02AC0A404004B1D9F /* CNLoginViewState.swift */,
+				CF61A79E2AC0A3FC004B1D9F /* CNLoginView.swift */,
+				CF61A7A22AC0A408004B1D9F /* ViewSections */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CF61A7A22AC0A408004B1D9F /* ViewSections */ = {
+			isa = PBXGroup;
+			children = (
+				CF61A7A32AC0A868004B1D9F /* CNLoginHeaderSectionView.swift */,
+				CF61A7A92AC0C31E004B1D9F /* CNLoginFooterSectionView.swift */,
+			);
+			path = ViewSections;
+			sourceTree = "<group>";
+		};
+		CF61A7A52AC0A8B6004B1D9F /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				CFA9FEC02ABFB6F60032555C /* CNButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		CF61A7A62AC0A8C5004B1D9F /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				CF61A7A72AC0A8D4004B1D9F /* CNTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		CFA9FEB42ABF63D00032555C /* Extensions */ = {
@@ -187,7 +231,8 @@
 		CFA9FEBF2ABFB68D0032555C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				CFA9FEC02ABFB6F60032555C /* CNButton.swift */,
+				CF61A7A52AC0A8B6004B1D9F /* Button */,
+				CF61A7A62AC0A8C5004B1D9F /* TextField */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -333,6 +378,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA9FEB82ABF67680032555C /* UIColorExtensions.swift in Sources */,
+				CF61A79F2AC0A3FC004B1D9F /* CNLoginView.swift in Sources */,
+				CF61A7A82AC0A8D4004B1D9F /* CNTextField.swift in Sources */,
+				CF61A79B2AC0A359004B1D9F /* CNLoginViewController.swift in Sources */,
 				CFA9FEC62ABFC2510032555C /* CNFlowController.swift in Sources */,
 				CF53C22F2ABF554B00E6C8A6 /* CNOnboardingView.swift in Sources */,
 				CFA9FEC82ABFC3070032555C /* CNFactory.swift in Sources */,
@@ -340,13 +388,17 @@
 				CFA9FEBC2ABF781C0032555C /* CNOnboardingBodySectionView.swift in Sources */,
 				CF53C22D2ABF553400E6C8A6 /* CNOnboardingViewModel.swift in Sources */,
 				CFA9FECB2ABFC4A60032555C /* CNFlowController+Onboarding.swift in Sources */,
+				CF61A7A12AC0A404004B1D9F /* CNLoginViewState.swift in Sources */,
 				CFA9FEB32ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift in Sources */,
+				CF61A7A42AC0A868004B1D9F /* CNLoginHeaderSectionView.swift in Sources */,
 				CFA9FEBE2ABF7D190032555C /* UIStackViewExtensions.swift in Sources */,
 				CFA9FEB62ABF642B0032555C /* UIImageExtensions.swift in Sources */,
 				CF53C22B2ABF54F300E6C8A6 /* CNOnboardingViewController.swift in Sources */,
 				CFA9FEBA2ABF6A510032555C /* UIViewExtensions.swift in Sources */,
+				CF61A7AA2AC0C31E004B1D9F /* CNLoginFooterSectionView.swift in Sources */,
 				CF53C2322ABF55F900E6C8A6 /* CNOnboardingViewState.swift in Sources */,
 				CFA9FEC32ABFBA170032555C /* CNOnboardingFooterSectionView.swift in Sources */,
+				CF61A79D2AC0A3F5004B1D9F /* CNLoginViewModel.swift in Sources */,
 				CF53C2122ABF4FCF00E6C8A6 /* AppDelegate.swift in Sources */,
 				CF53C2142ABF4FCF00E6C8A6 /* SceneDelegate.swift in Sources */,
 			);

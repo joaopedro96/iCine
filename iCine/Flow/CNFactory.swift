@@ -17,6 +17,9 @@ final class CNFactory {
         return viewController
     }
     
-    
-    
+    func makeLoginViewController() -> CNLoginViewController {
+        let viewModel = CNLoginViewModel()
+        let viewcontroller = CNLoginViewController(viewModel: viewModel)
+        return viewcontroller
+    }
 }

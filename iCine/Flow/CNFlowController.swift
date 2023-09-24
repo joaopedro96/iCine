@@ -12,12 +12,13 @@ final class CNFlowController {
     // MARK: - PROPERTIES
     
     var rootNavigation: UINavigationController?
-    private let factory = CNFactory()
+    let factory = CNFactory()
     
     // MARK: - INITIALIZERS
     
     init() {
         setupRootNavigation()
+        customizeNavigationStyle()
     }
     
     // MARK: - PRIVATE METHODS
@@ -26,5 +27,11 @@ final class CNFlowController {
         let rootController = factory.makeOnboardingViewController()
         rootController.delegate = self
         rootNavigation = UINavigationController(rootViewController: rootController)
+    }
+    
+    private func customizeNavigationStyle() {
+        rootNavigation?.navigationBar.backIndicatorImage = .leftArrowIcon
+        rootNavigation?.navigationBar.backIndicatorTransitionMaskImage = .leftArrowIcon
+        rootNavigation?.navigationBar.topItem?.backButtonTitle = ""
     }
 }
