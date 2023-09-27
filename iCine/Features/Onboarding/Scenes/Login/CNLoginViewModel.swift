@@ -16,10 +16,17 @@ final class CNLoginViewModel {
     // MARK: - PROPERTIES
     
     weak var delegate: CNLoginViewModelDelegate?
+    private var network: CNNetworkControllerProtocol
     private var viewState: CNLoginViewState = .isEmpty {
         didSet {
             delegate?.updateState(with: viewState)
         }
+    }
+
+    // MARK: - INITIALIZERS
+    
+    init(network: CNNetworkControllerProtocol = CNNetworkController()) {
+        self.network = network
     }
     
     // MARK: - PUBLIC METHODS
@@ -36,6 +43,16 @@ final class CNLoginViewModel {
     // MARK: - FETCH METHODS
     
     private func getRequestToken() {
-        viewState = .hasData
+        network.execute(request: CNLoginRequest.requestToken,
+                        responseType: CNLoginRequestTokenResponse.self) { [weak self] result in
+            
+            switch result {
+                case .success(let response):
+                    print(response)
+                    
+                case .failure(let error):
+                    print(error)
+            }
+        }
     }
 }

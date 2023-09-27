@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		9F646EC2DE66DD8A424B07F8 /* Pods_iCine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F4C753AB79AA6E622D0ADB /* Pods_iCine.framework */; };
 		CF522C9E2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522C9D2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift */; };
+		CF522CA32AC3C29E00F984A2 /* CNNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CA22AC3C29E00F984A2 /* CNNetworkController.swift */; };
+		CF522CA52AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CA42AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift */; };
+		CF522CA72AC3C33300F984A2 /* CNNetworkRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CA62AC3C33300F984A2 /* CNNetworkRequestProtocol.swift */; };
+		CF522CA92AC3C3AC00F984A2 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CA82AC3C3AC00F984A2 /* DataExtensions.swift */; };
+		CF522CAB2AC3C3D700F984A2 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CAA2AC3C3D700F984A2 /* EncodableExtensions.swift */; };
+		CF522CAF2AC3C42600F984A2 /* CNLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CAE2AC3C42600F984A2 /* CNLoginRequest.swift */; };
+		CF522CB32AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CB22AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift */; };
 		CF53C2122ABF4FCF00E6C8A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C2112ABF4FCF00E6C8A6 /* AppDelegate.swift */; };
 		CF53C2142ABF4FCF00E6C8A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C2132ABF4FCF00E6C8A6 /* SceneDelegate.swift */; };
 		CF53C21B2ABF4FD000E6C8A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF53C21A2ABF4FD000E6C8A6 /* Assets.xcassets */; };
@@ -42,6 +49,13 @@
 		43F4C753AB79AA6E622D0ADB /* Pods_iCine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD8E4C772CAA4B8EF6EADC1 /* Pods-iCine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCine.release.xcconfig"; path = "Target Support Files/Pods-iCine/Pods-iCine.release.xcconfig"; sourceTree = "<group>"; };
 		CF522C9D2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicKeyboardHeightViewController.swift; sourceTree = "<group>"; };
+		CF522CA22AC3C29E00F984A2 /* CNNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNetworkController.swift; sourceTree = "<group>"; };
+		CF522CA42AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNetworkControllerProtocol.swift; sourceTree = "<group>"; };
+		CF522CA62AC3C33300F984A2 /* CNNetworkRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNetworkRequestProtocol.swift; sourceTree = "<group>"; };
+		CF522CA82AC3C3AC00F984A2 /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		CF522CAA2AC3C3D700F984A2 /* EncodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
+		CF522CAE2AC3C42600F984A2 /* CNLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginRequest.swift; sourceTree = "<group>"; };
+		CF522CB22AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginRequestTokenResponse.swift; sourceTree = "<group>"; };
 		CF53C20E2ABF4FCF00E6C8A6 /* iCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF53C2112ABF4FCF00E6C8A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF53C2132ABF4FCF00E6C8A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +123,56 @@
 			path = DynamicKeyboardHeight;
 			sourceTree = "<group>";
 		};
+		CF522CA02AC3BC1000F984A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF522CA12AC3BC2800F984A2 /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF522CA12AC3BC2800F984A2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CF522CA22AC3C29E00F984A2 /* CNNetworkController.swift */,
+				CF522CA42AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift */,
+				CF522CA62AC3C33300F984A2 /* CNNetworkRequestProtocol.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CF522CAC2AC3C3FE00F984A2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CF522CAD2AC3C41000F984A2 /* Login */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		CF522CAD2AC3C41000F984A2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CF522CAE2AC3C42600F984A2 /* CNLoginRequest.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CF522CB02AC3C49900F984A2 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				CF522CB12AC3C4E500F984A2 /* Login */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		CF522CB12AC3C4E500F984A2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CF522CB22AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		CF53C2052ABF4FCF00E6C8A6 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +194,7 @@
 		CF53C2102ABF4FCF00E6C8A6 /* iCine */ = {
 			isa = PBXGroup;
 			children = (
+				CF522CA02AC3BC1000F984A2 /* Services */,
 				CFA9FEC42ABFC2310032555C /* Flow */,
 				CF53C2252ABF540200E6C8A6 /* Features */,
 				CFA9FEB42ABF63D00032555C /* Extensions */,
@@ -154,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				CFA9FEC92ABFC4950032555C /* Flow */,
+				CF522CAC2AC3C3FE00F984A2 /* Requests */,
+				CF522CB02AC3C49900F984A2 /* Responses */,
 				CF53C2292ABF546A00E6C8A6 /* Scenes */,
 			);
 			path = Onboarding;
@@ -234,6 +301,8 @@
 				CFA9FEB52ABF642B0032555C /* UIImageExtensions.swift */,
 				CFA9FEB72ABF67680032555C /* UIColorExtensions.swift */,
 				CFA9FEBD2ABF7D190032555C /* UIStackViewExtensions.swift */,
+				CF522CA82AC3C3AC00F984A2 /* DataExtensions.swift */,
+				CF522CAA2AC3C3D700F984A2 /* EncodableExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -391,6 +460,7 @@
 				CFA9FEB82ABF67680032555C /* UIColorExtensions.swift in Sources */,
 				CF61A79F2AC0A3FC004B1D9F /* CNLoginView.swift in Sources */,
 				CF61A7A82AC0A8D4004B1D9F /* CNTextField.swift in Sources */,
+				CF522CA32AC3C29E00F984A2 /* CNNetworkController.swift in Sources */,
 				CF61A79B2AC0A359004B1D9F /* CNLoginViewController.swift in Sources */,
 				CFA9FEC62ABFC2510032555C /* CNFlowController.swift in Sources */,
 				CF53C22F2ABF554B00E6C8A6 /* CNOnboardingView.swift in Sources */,
@@ -400,18 +470,24 @@
 				CF53C22D2ABF553400E6C8A6 /* CNOnboardingViewModel.swift in Sources */,
 				CFA9FECB2ABFC4A60032555C /* CNFlowController+Onboarding.swift in Sources */,
 				CF61A7A12AC0A404004B1D9F /* CNLoginViewState.swift in Sources */,
+				CF522CA92AC3C3AC00F984A2 /* DataExtensions.swift in Sources */,
 				CFA9FEB32ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift in Sources */,
 				CF61A7A42AC0A868004B1D9F /* CNLoginHeaderSectionView.swift in Sources */,
 				CFA9FEBE2ABF7D190032555C /* UIStackViewExtensions.swift in Sources */,
 				CFA9FEB62ABF642B0032555C /* UIImageExtensions.swift in Sources */,
 				CF53C22B2ABF54F300E6C8A6 /* CNOnboardingViewController.swift in Sources */,
+				CF522CAB2AC3C3D700F984A2 /* EncodableExtensions.swift in Sources */,
 				CFA9FEBA2ABF6A510032555C /* UIViewExtensions.swift in Sources */,
 				CF61A7AA2AC0C31E004B1D9F /* CNLoginFooterSectionView.swift in Sources */,
 				CF522C9E2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift in Sources */,
 				CF53C2322ABF55F900E6C8A6 /* CNOnboardingViewState.swift in Sources */,
 				CFA9FEC32ABFBA170032555C /* CNOnboardingFooterSectionView.swift in Sources */,
+				CF522CA72AC3C33300F984A2 /* CNNetworkRequestProtocol.swift in Sources */,
+				CF522CAF2AC3C42600F984A2 /* CNLoginRequest.swift in Sources */,
 				CF61A79D2AC0A3F5004B1D9F /* CNLoginViewModel.swift in Sources */,
 				CF53C2122ABF4FCF00E6C8A6 /* AppDelegate.swift in Sources */,
+				CF522CB32AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift in Sources */,
+				CF522CA52AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift in Sources */,
 				CF53C2142ABF4FCF00E6C8A6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
