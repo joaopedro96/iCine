@@ -49,6 +49,13 @@ final class CNLoginHeaderSectionView: UIView {
         return setupComponent
     }()
     
+    // MARK: - PUBLIC METHODS
+    
+    func closeKeyboard() {
+        userTextField.closeKeyboard()
+        passwordTextField.closeKeyboard()
+    }
+    
     // MARK: - SETUP VIEW
     
     private func setupView() {

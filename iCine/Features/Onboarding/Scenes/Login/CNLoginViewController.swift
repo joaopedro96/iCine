@@ -9,7 +9,7 @@ import UIKit
 
 protocol CNLoginViewControllerDelegate: AnyObject { }
 
-final class CNLoginViewController: UIViewController {
+final class CNLoginViewController: DynamicKeyboardHeightViewController {
     
     // MARK: - PROPERTIES
     
@@ -36,6 +36,11 @@ final class CNLoginViewController: UIViewController {
         super.viewDidLoad()
         setupController()
         viewModel.start()
+    }
+    
+    override func updateViewConstraint(with height: CGFloat) {
+        contentView.updateFooterConstraint(with: height)
+        view.layoutIfNeeded()
     }
     
     // MARK: - PRIVATE METHODS

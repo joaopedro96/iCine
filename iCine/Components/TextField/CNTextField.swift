@@ -81,6 +81,12 @@ final class CNTextField: UIView {
         return setupComponent
     }()
     
+    // MARK: - PUBLIC METHODS
+    
+    func closeKeyboard() {
+        textField.endEditing(true)
+    }
+    
     // MARK: - PRIVATE METHODS
     
     private func shouldHighlightTextField(_ state: Bool) {

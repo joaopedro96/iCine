@@ -16,6 +16,7 @@ final class CNLoginFooterSectionView: UIView {
     // MARK: - PROPERTIES
     
     weak var delegate: CNLoginFooterSectionViewDelegate?
+    private var bottomConstraint: NSLayoutConstraint?
     
     // MARK: - INITIALIZERS
     
@@ -37,6 +38,12 @@ final class CNLoginFooterSectionView: UIView {
         setupComponent.addTarget(self, action: #selector(didTapContinueButton), for: .touchUpInside)
         return setupComponent
     }()
+    
+    // MARK: - PUBLIC METHODS
+    
+    func updateBottomConstraint(with height: CGFloat) {
+        bottomConstraint?.constant = -height
+    }
     
     // MARK: - PRIVATE METHODS
     
@@ -60,7 +67,9 @@ final class CNLoginFooterSectionView: UIView {
             make.top.equalToSuperview()
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().inset(16)
-            make.bottom.equalToSuperview().inset(32)
         }
+        
+        bottomConstraint = continueButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -32)
+        bottomConstraint?.isActive = true
     }
 }

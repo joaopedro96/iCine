@@ -42,7 +42,17 @@ final class CNLoginView: UIView {
     // MARK: - PUBLIC METHODS
     
     func updateView(with state: CNLoginViewState) {
-       
+        
+    }
+    
+    func updateFooterConstraint(with height: CGFloat) {
+        footerSection.updateBottomConstraint(with: height)
+    }
+    
+    // MARK: - PRIVATE METHODS
+    
+    @objc private func didTapView() {
+        headerSection.closeKeyboard()
     }
     
     // MARK: - SETUP VIEW
@@ -71,6 +81,7 @@ final class CNLoginView: UIView {
     
     private func customizeView() {
         backgroundColor = .bgDark
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapView)))
     }
 }
 
