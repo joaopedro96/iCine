@@ -35,7 +35,11 @@ final class CNLoginViewController: DynamicKeyboardHeightViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupController()
-        viewModel.start()
+        let credentials = CNLoginUserCredentials(
+            username: "blein1",
+            password: "010203"
+        )
+        viewModel.createUserSession(with: credentials)
     }
     
     override func updateViewConstraint(with height: CGFloat) {

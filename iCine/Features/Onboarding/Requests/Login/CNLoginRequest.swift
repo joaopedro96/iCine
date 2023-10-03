@@ -11,15 +11,23 @@ import Alamofire
 enum CNLoginRequest: CNNetworkRequestProtocol {
     
     case requestToken
+    case validateToken(payload: CNLoginValidateTokenPayload)
+    case createSession(requestToken: String)
+    case accountDetails(sessionID: String)
     
     var path: String {
         switch self {
             case .requestToken: return "/authentication/token/new"
+            case .validateToken: return "/authentication/token/validate_with_login"
+            case .createSession: return "/authentication/session/new"
+            case .accountDetails: return "/account"
         }
     }
     
     var method: HTTPMethod {
         switch self {
+            case .validateToken, .createSession:
+                return .post
             default:
                 return .get
         }
@@ -27,6 +35,12 @@ enum CNLoginRequest: CNNetworkRequestProtocol {
     
     var parameters: [String: Any]? {
         switch self {
+            case .validateToken(let payload):
+                return payload.asDictionary()
+            case .createSession(let requestToken):
+                return ["request_token": requestToken]
+            case .accountDetails(let sessionID):
+                return ["session_id": sessionID]
             default: return nil
         }
     }

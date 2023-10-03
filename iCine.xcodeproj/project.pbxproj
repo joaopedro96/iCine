@@ -31,6 +31,10 @@
 		CF61A7A42AC0A868004B1D9F /* CNLoginHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A32AC0A868004B1D9F /* CNLoginHeaderSectionView.swift */; };
 		CF61A7A82AC0A8D4004B1D9F /* CNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A72AC0A8D4004B1D9F /* CNTextField.swift */; };
 		CF61A7AA2AC0C31E004B1D9F /* CNLoginFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A92AC0C31E004B1D9F /* CNLoginFooterSectionView.swift */; };
+		CF8537CD2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537CC2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift */; };
+		CF8537CF2ACBB0CD007E42E5 /* CNLoginUserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537CE2ACBB0CD007E42E5 /* CNLoginUserCredentials.swift */; };
+		CF8537D32ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537D22ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift */; };
+		CF8537D52ACBB908007E42E5 /* CNLoginAccountDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537D42ACBB908007E42E5 /* CNLoginAccountDetailsResponse.swift */; };
 		CFA9FEB32ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB22ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift */; };
 		CFA9FEB62ABF642B0032555C /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB52ABF642B0032555C /* UIImageExtensions.swift */; };
 		CFA9FEB82ABF67680032555C /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB72ABF67680032555C /* UIColorExtensions.swift */; };
@@ -73,6 +77,10 @@
 		CF61A7A32AC0A868004B1D9F /* CNLoginHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginHeaderSectionView.swift; sourceTree = "<group>"; };
 		CF61A7A72AC0A8D4004B1D9F /* CNTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNTextField.swift; sourceTree = "<group>"; };
 		CF61A7A92AC0C31E004B1D9F /* CNLoginFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginFooterSectionView.swift; sourceTree = "<group>"; };
+		CF8537CC2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginValidateTokenPayload.swift; sourceTree = "<group>"; };
+		CF8537CE2ACBB0CD007E42E5 /* CNLoginUserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginUserCredentials.swift; sourceTree = "<group>"; };
+		CF8537D22ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginCreateSessionResponse.swift; sourceTree = "<group>"; };
+		CF8537D42ACBB908007E42E5 /* CNLoginAccountDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginAccountDetailsResponse.swift; sourceTree = "<group>"; };
 		CFA9FEB22ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingBackgroundSectionView.swift; sourceTree = "<group>"; };
 		CFA9FEB52ABF642B0032555C /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		CFA9FEB72ABF67680032555C /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
@@ -169,6 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				CF522CB22AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift */,
+				CF8537D22ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift */,
+				CF8537D42ACBB908007E42E5 /* CNLoginAccountDetailsResponse.swift */,
+				CF8537CE2ACBB0CD007E42E5 /* CNLoginUserCredentials.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -218,6 +229,7 @@
 		CF53C2262ABF540900E6C8A6 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				CF8537CA2ACBAE9B007E42E5 /* Payloads */,
 				CFA9FEC92ABFC4950032555C /* Flow */,
 				CF522CAC2AC3C3FE00F984A2 /* Requests */,
 				CF522CB02AC3C49900F984A2 /* Responses */,
@@ -292,6 +304,22 @@
 				CF61A7A72AC0A8D4004B1D9F /* CNTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		CF8537CA2ACBAE9B007E42E5 /* Payloads */ = {
+			isa = PBXGroup;
+			children = (
+				CF8537CB2ACBAEA8007E42E5 /* Login */,
+			);
+			path = Payloads;
+			sourceTree = "<group>";
+		};
+		CF8537CB2ACBAEA8007E42E5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CF8537CC2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		CFA9FEB42ABF63D00032555C /* Extensions */ = {
@@ -461,6 +489,7 @@
 				CF61A79F2AC0A3FC004B1D9F /* CNLoginView.swift in Sources */,
 				CF61A7A82AC0A8D4004B1D9F /* CNTextField.swift in Sources */,
 				CF522CA32AC3C29E00F984A2 /* CNNetworkController.swift in Sources */,
+				CF8537CF2ACBB0CD007E42E5 /* CNLoginUserCredentials.swift in Sources */,
 				CF61A79B2AC0A359004B1D9F /* CNLoginViewController.swift in Sources */,
 				CFA9FEC62ABFC2510032555C /* CNFlowController.swift in Sources */,
 				CF53C22F2ABF554B00E6C8A6 /* CNOnboardingView.swift in Sources */,
@@ -472,6 +501,7 @@
 				CF61A7A12AC0A404004B1D9F /* CNLoginViewState.swift in Sources */,
 				CF522CA92AC3C3AC00F984A2 /* DataExtensions.swift in Sources */,
 				CFA9FEB32ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift in Sources */,
+				CF8537CD2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift in Sources */,
 				CF61A7A42AC0A868004B1D9F /* CNLoginHeaderSectionView.swift in Sources */,
 				CFA9FEBE2ABF7D190032555C /* UIStackViewExtensions.swift in Sources */,
 				CFA9FEB62ABF642B0032555C /* UIImageExtensions.swift in Sources */,
@@ -481,7 +511,9 @@
 				CF61A7AA2AC0C31E004B1D9F /* CNLoginFooterSectionView.swift in Sources */,
 				CF522C9E2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift in Sources */,
 				CF53C2322ABF55F900E6C8A6 /* CNOnboardingViewState.swift in Sources */,
+				CF8537D52ACBB908007E42E5 /* CNLoginAccountDetailsResponse.swift in Sources */,
 				CFA9FEC32ABFBA170032555C /* CNOnboardingFooterSectionView.swift in Sources */,
+				CF8537D32ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift in Sources */,
 				CF522CA72AC3C33300F984A2 /* CNNetworkRequestProtocol.swift in Sources */,
 				CF522CAF2AC3C42600F984A2 /* CNLoginRequest.swift in Sources */,
 				CF61A79D2AC0A3F5004B1D9F /* CNLoginViewModel.swift in Sources */,
