@@ -45,6 +45,14 @@ final class CNLoginFooterSectionView: UIView {
         bottomConstraint?.constant = -height
     }
     
+    func shouldEnableButton(_ state: Bool) {
+        continueButton.isEnabled = state
+    }
+    
+    func shouldShowLoading(_ state: Bool) {
+        continueButton.isLoading = state
+    }
+    
     // MARK: - PRIVATE METHODS
     
     @objc private func didTapContinueButton() {

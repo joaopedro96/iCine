@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 enum CNButtonType {
     case primary
@@ -28,6 +29,24 @@ final class CNButton: UIButton {
         }
     }
     
+    var isLoading: Bool = false {
+        didSet {
+            shouldShowLoading()
+        }
+    }
+    
+    private var previousTitle: String? = ""
+    
+    // MARK: - UI
+    
+    private lazy var loadingView: LottieAnimationView = {
+        let setupComponent = LottieAnimationView(name: "button_loading")
+        setupComponent.translatesAutoresizingMaskIntoConstraints = false
+        setupComponent.loopMode = .loop
+        setupComponent.isHidden = true
+        return setupComponent
+    }()
+    
     // MARK: - INITIALIZERS
     
     init(buttonType: CNButtonType = .primary) {
@@ -42,6 +61,24 @@ final class CNButton: UIButton {
     
     // MARK: - PRIVATE METHODS
     
+    private func shouldShowLoading() {
+        isEnabled = !isLoading
+        loadingView.isHidden = !isLoading
+        isEnabled ? loadingView.stop() : loadingView.play()
+        updateTitle()
+    }
+    
+    private func updateTitle() {
+        if isLoading {
+            previousTitle = currentTitle
+            setTitle("", for: .normal)
+        } else {
+            setTitle(previousTitle, for: .normal)
+        }
+    }
+    
+    // MARK: - SETUP VIEW
+    
     private func setupButton() {
         setupDefaultProperties()
         setupTypeProperties()
@@ -52,6 +89,7 @@ final class CNButton: UIButton {
         snp.makeConstraints { make in
             make.height.equalTo(44)
         }
+        addLoadingView()
     }
     
     private func setupTypeProperties() {
@@ -74,5 +112,14 @@ final class CNButton: UIButton {
         backgroundColor = . clear
         layer.borderColor = UIColor.bgLight.cgColor
         layer.borderWidth = 1
+    }
+    
+    private func addLoadingView() {
+        addSubview(loadingView)
+        loadingView.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.width.equalTo(44)
+        }
     }
 }

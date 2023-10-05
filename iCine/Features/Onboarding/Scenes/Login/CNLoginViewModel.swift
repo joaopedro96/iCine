@@ -34,6 +34,7 @@ final class CNLoginViewModel {
     func start() { }
     
     func createUserSession(with credentials: CNLoginUserCredentials) {
+        viewState = .isLoading
         getRequestToken(with: credentials)
     }
     
@@ -63,8 +64,8 @@ final class CNLoginViewModel {
                 case .success(let response):
                     self?.makeValidateTokenPayload(with: credentials, and: response.requestToken)
                     
-                case .failure(let error):
-                    print(error)
+                case .failure:
+                    self?.viewState = .hasError
             }
         }
     }
@@ -77,8 +78,8 @@ final class CNLoginViewModel {
                 case .success(let response):
                     self?.postCreateSession(with: response.requestToken)
                     
-                case .failure(let error):
-                    print(error)
+                case .failure:
+                    self?.viewState = .hasError
             }
         }
     }
@@ -91,8 +92,8 @@ final class CNLoginViewModel {
                 case .success(let response):
                     self?.getAccountDetails(with: response.sessionID)
                     
-                case .failure(let error):
-                    print(error)
+                case .failure:
+                    self?.viewState = .hasError
             }
         }
     }
@@ -103,11 +104,11 @@ final class CNLoginViewModel {
             
             switch result {
                 case .success(let response):
-                    print(self?.viewState as Any)
+                    self?.viewState = .hasData
                     print(response.id)
                     
-                case .failure(let error):
-                    print(error)
+                case .failure:
+                    self?.viewState = .hasError
             }
         }
     }

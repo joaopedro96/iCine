@@ -46,6 +46,7 @@
 		CFA9FEC62ABFC2510032555C /* CNFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEC52ABFC2510032555C /* CNFlowController.swift */; };
 		CFA9FEC82ABFC3070032555C /* CNFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEC72ABFC3070032555C /* CNFactory.swift */; };
 		CFA9FECB2ABFC4A60032555C /* CNFlowController+Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FECA2ABFC4A60032555C /* CNFlowController+Onboarding.swift */; };
+		CFC7288B2ACE4F6B00DAF2B2 /* button_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CFC7288A2ACE4F6B00DAF2B2 /* button_loading.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		CFA9FEC52ABFC2510032555C /* CNFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNFlowController.swift; sourceTree = "<group>"; };
 		CFA9FEC72ABFC3070032555C /* CNFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNFactory.swift; sourceTree = "<group>"; };
 		CFA9FECA2ABFC4A60032555C /* CNFlowController+Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CNFlowController+Onboarding.swift"; sourceTree = "<group>"; };
+		CFC7288A2ACE4F6B00DAF2B2 /* button_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = button_loading.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,10 +367,19 @@
 		CFA9FECC2ABFC6E00032555C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CFC728872ACE4B1900DAF2B2 /* Animations */,
 				CF53C21A2ABF4FD000E6C8A6 /* Assets.xcassets */,
 				CF53C21C2ABF4FD000E6C8A6 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CFC728872ACE4B1900DAF2B2 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				CFC7288A2ACE4F6B00DAF2B2 /* button_loading.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +444,7 @@
 			files = (
 				CF53C21E2ABF4FD000E6C8A6 /* LaunchScreen.storyboard in Resources */,
 				CF53C21B2ABF4FD000E6C8A6 /* Assets.xcassets in Resources */,
+				CFC7288B2ACE4F6B00DAF2B2 /* button_loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

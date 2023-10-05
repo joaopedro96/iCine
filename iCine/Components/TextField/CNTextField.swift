@@ -8,7 +8,17 @@
 import UIKit
 
 protocol CNTextFieldDelegate: AnyObject {
-    
+    func textFieldDidBeginEditing(_ textField: UITextField)
+    func textFieldDidEndEditing(_ textField: UITextField)
+    func textFieldShouldReturn(_ textField: UITextField)
+    func textFieldDidChangeEditing(textField: UITextField, newText: String?)
+}
+
+extension CNTextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) { }
+    func textFieldDidEndEditing(_ textField: UITextField) { }
+    func textFieldShouldReturn(_ textField: UITextField) { }
+    func textFieldDidChangeEditing(textField: UITextField, newText: String?) { }
 }
 
 final class CNTextField: UIView {
@@ -16,6 +26,18 @@ final class CNTextField: UIView {
     // MARK: - PROPERTIES
     
     weak var delegate: CNTextFieldDelegate?
+    
+    var autoCapitalizationType: UITextAutocapitalizationType = .sentences {
+        didSet {
+            textField.autocapitalizationType = autoCapitalizationType
+        }
+    }
+    
+    var autoCorrectionType:  UITextAutocorrectionType = .default {
+        didSet {
+            textField.autocorrectionType = .default
+        }
+    }
     
     var isSecureTextEntry: Bool = false {
         didSet {
@@ -41,6 +63,10 @@ final class CNTextField: UIView {
             updatePlaceholder()
         }
     }
+        
+    var isFilled: Bool = false
+    
+    var text: String = ""
     
     // MARK: - INITIALIZERS
     
@@ -82,6 +108,10 @@ final class CNTextField: UIView {
     }()
     
     // MARK: - PUBLIC METHODS
+    
+    func getTextField() -> UITextField {
+        return textField
+    }
     
     func closeKeyboard() {
         textField.endEditing(true)
@@ -147,13 +177,25 @@ final class CNTextField: UIView {
 extension CNTextField: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         shouldHighlightTextField(true)
+        delegate?.textFieldDidEndEditing(textField)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         shouldHighlightTextField(false)
+        delegate?.textFieldDidEndEditing(textField)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        delegate?.textFieldShouldReturn(textField)
         textField.endEditing(true)
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text as? NSString
+        let newString = currentText?.replacingCharacters(in: range, with: string)
+        text = newString ?? ""
+        delegate?.textFieldDidChangeEditing(textField: textField, newText: newString)
+        return true
     }
 }

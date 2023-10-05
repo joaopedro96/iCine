@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol CNLoginViewDelegate: AnyObject { }
+protocol CNLoginViewDelegate: AnyObject {
+    func createUserSession(with credentials: CNLoginUserCredentials)
+}
 
 final class CNLoginView: UIView {
     
@@ -30,6 +32,7 @@ final class CNLoginView: UIView {
     
     private lazy var headerSection: CNLoginHeaderSectionView = {
         let setupComponent = CNLoginHeaderSectionView()
+        setupComponent.delegate = self
         return setupComponent
     }()
     
@@ -42,7 +45,15 @@ final class CNLoginView: UIView {
     // MARK: - PUBLIC METHODS
     
     func updateView(with state: CNLoginViewState) {
-        
+        switch state {
+            case .hasData:
+                footerSection.shouldShowLoading(false)
+            case .isLoading:
+                footerSection.shouldShowLoading(true)
+            case .hasError:
+                footerSection.shouldShowLoading(false)
+            default: return
+        }
     }
     
     func updateFooterConstraint(with height: CGFloat) {
@@ -53,6 +64,14 @@ final class CNLoginView: UIView {
     
     @objc private func didTapView() {
         headerSection.closeKeyboard()
+    }
+    
+    private func makeUserCredentialsObject() {
+        let credentials = CNLoginUserCredentials(
+            username: headerSection.getUserName(),
+            password: headerSection.getUserPassword()
+        )
+        delegate?.createUserSession(with: credentials)
     }
     
     // MARK: - SETUP VIEW
@@ -87,8 +106,15 @@ final class CNLoginView: UIView {
 
 // MARK: - EXTENSIONS
 
+extension CNLoginView: CNLoginHeaderSectionViewDelegate {
+    func shouldEnableButton(_ state: Bool) {
+        footerSection.shouldEnableButton(state)
+    }
+}
+
 extension CNLoginView: CNLoginFooterSectionViewDelegate {
     func didTapContinueButton() {
-        print("continue button tapped")
+        headerSection.closeKeyboard()
+        makeUserCredentialsObject()
     }
 }
