@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9F646EC2DE66DD8A424B07F8 /* Pods_iCine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F4C753AB79AA6E622D0ADB /* Pods_iCine.framework */; };
+		CF4874FD2AD22A5F0056EE78 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4874FC2AD22A5F0056EE78 /* BottomSheetViewController.swift */; };
+		CF4874FF2AD22A760056EE78 /* PresentedSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4874FE2AD22A760056EE78 /* PresentedSheetViewController.swift */; };
+		CF4875012AD23CFB0056EE78 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4875002AD23CFB0056EE78 /* UIViewControllerExtensions.swift */; };
+		CF4875032AD23F7E0056EE78 /* CNLoginRequestErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4875022AD23F7E0056EE78 /* CNLoginRequestErrorView.swift */; };
 		CF522C9E2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522C9D2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift */; };
 		CF522CA32AC3C29E00F984A2 /* CNNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CA22AC3C29E00F984A2 /* CNNetworkController.swift */; };
 		CF522CA52AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CA42AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift */; };
@@ -53,6 +57,10 @@
 		1A5DF45C673D05867534DCAA /* Pods-iCine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCine.debug.xcconfig"; path = "Target Support Files/Pods-iCine/Pods-iCine.debug.xcconfig"; sourceTree = "<group>"; };
 		43F4C753AB79AA6E622D0ADB /* Pods_iCine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD8E4C772CAA4B8EF6EADC1 /* Pods-iCine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCine.release.xcconfig"; path = "Target Support Files/Pods-iCine/Pods-iCine.release.xcconfig"; sourceTree = "<group>"; };
+		CF4874FC2AD22A5F0056EE78 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		CF4874FE2AD22A760056EE78 /* PresentedSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedSheetViewController.swift; sourceTree = "<group>"; };
+		CF4875002AD23CFB0056EE78 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		CF4875022AD23F7E0056EE78 /* CNLoginRequestErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginRequestErrorView.swift; sourceTree = "<group>"; };
 		CF522C9D2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicKeyboardHeightViewController.swift; sourceTree = "<group>"; };
 		CF522CA22AC3C29E00F984A2 /* CNNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNetworkController.swift; sourceTree = "<group>"; };
 		CF522CA42AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNetworkControllerProtocol.swift; sourceTree = "<group>"; };
@@ -123,6 +131,15 @@
 				43F4C753AB79AA6E622D0ADB /* Pods_iCine.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF4874F42AD226C20056EE78 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				CF4874FC2AD22A5F0056EE78 /* BottomSheetViewController.swift */,
+				CF4874FE2AD22A760056EE78 /* PresentedSheetViewController.swift */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 		CF522C9F2AC3B32600F984A2 /* DynamicKeyboardHeight */ = {
@@ -288,6 +305,7 @@
 			children = (
 				CF61A7A32AC0A868004B1D9F /* CNLoginHeaderSectionView.swift */,
 				CF61A7A92AC0C31E004B1D9F /* CNLoginFooterSectionView.swift */,
+				CF4875022AD23F7E0056EE78 /* CNLoginRequestErrorView.swift */,
 			);
 			path = ViewSections;
 			sourceTree = "<group>";
@@ -333,6 +351,7 @@
 				CFA9FEBD2ABF7D190032555C /* UIStackViewExtensions.swift */,
 				CF522CA82AC3C3AC00F984A2 /* DataExtensions.swift */,
 				CF522CAA2AC3C3D700F984A2 /* EncodableExtensions.swift */,
+				CF4875002AD23CFB0056EE78 /* UIViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -340,6 +359,7 @@
 		CFA9FEBF2ABFB68D0032555C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CF4874F42AD226C20056EE78 /* BottomSheet */,
 				CF522C9F2AC3B32600F984A2 /* DynamicKeyboardHeight */,
 				CF61A7A52AC0A8B6004B1D9F /* Button */,
 				CF61A7A62AC0A8C5004B1D9F /* TextField */,
@@ -514,11 +534,13 @@
 				CF522CA92AC3C3AC00F984A2 /* DataExtensions.swift in Sources */,
 				CFA9FEB32ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift in Sources */,
 				CF8537CD2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift in Sources */,
+				CF4875032AD23F7E0056EE78 /* CNLoginRequestErrorView.swift in Sources */,
 				CF61A7A42AC0A868004B1D9F /* CNLoginHeaderSectionView.swift in Sources */,
 				CFA9FEBE2ABF7D190032555C /* UIStackViewExtensions.swift in Sources */,
 				CFA9FEB62ABF642B0032555C /* UIImageExtensions.swift in Sources */,
 				CF53C22B2ABF54F300E6C8A6 /* CNOnboardingViewController.swift in Sources */,
 				CF522CAB2AC3C3D700F984A2 /* EncodableExtensions.swift in Sources */,
+				CF4874FD2AD22A5F0056EE78 /* BottomSheetViewController.swift in Sources */,
 				CFA9FEBA2ABF6A510032555C /* UIViewExtensions.swift in Sources */,
 				CF61A7AA2AC0C31E004B1D9F /* CNLoginFooterSectionView.swift in Sources */,
 				CF522C9E2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift in Sources */,
@@ -528,6 +550,8 @@
 				CF8537D32ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift in Sources */,
 				CF522CA72AC3C33300F984A2 /* CNNetworkRequestProtocol.swift in Sources */,
 				CF522CAF2AC3C42600F984A2 /* CNLoginRequest.swift in Sources */,
+				CF4875012AD23CFB0056EE78 /* UIViewControllerExtensions.swift in Sources */,
+				CF4874FF2AD22A760056EE78 /* PresentedSheetViewController.swift in Sources */,
 				CF61A79D2AC0A3F5004B1D9F /* CNLoginViewModel.swift in Sources */,
 				CF53C2122ABF4FCF00E6C8A6 /* AppDelegate.swift in Sources */,
 				CF522CB32AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift in Sources */,

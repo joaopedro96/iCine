@@ -63,4 +63,16 @@ extension CNLoginViewController: CNLoginViewDelegate {
     func createUserSession(with credentials: CNLoginUserCredentials) {
         viewModel.createUserSession(with: credentials)
     }
+    
+    func presentErrorBottomSheet() {
+        let errorView = CNLoginRequestErrorView()
+        errorView.delegate = self
+        showBottomSheet(with: errorView)
+    }
+}
+
+extension CNLoginViewController: CNLoginRequestErrorViewDelegate {
+    func didTapButton() {
+        dismiss(animated: true)
+    }
 }

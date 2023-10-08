@@ -9,6 +9,7 @@ import UIKit
 
 protocol CNLoginViewDelegate: AnyObject {
     func createUserSession(with credentials: CNLoginUserCredentials)
+    func presentErrorBottomSheet()
 }
 
 final class CNLoginView: UIView {
@@ -52,6 +53,7 @@ final class CNLoginView: UIView {
                 footerSection.shouldShowLoading(true)
             case .hasError:
                 footerSection.shouldShowLoading(false)
+                delegate?.presentErrorBottomSheet()
             default: return
         }
     }

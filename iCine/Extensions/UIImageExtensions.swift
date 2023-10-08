@@ -11,6 +11,10 @@ extension UIImage {
     
     // MARK: - COMMONS
     
+    class var alertIcon: UIImage {
+        return initializeSystemIcon(with: "exclamationmark.circle")
+    }
+    
     class var appLogo: UIImage {
         return initialize(with: "iCineLogo")
     }
