@@ -17,6 +17,12 @@ final class CNHyperlinkTextView: UITextView {
     
     weak var hyperlinkDelegate: CNHyperlinkTextViewDelegate?
     
+    override var textColor: UIColor? {
+        didSet {
+            if (tintColor == .systemBlue) { setHyperlinkColor(textColor) }
+        }
+    }
+    
     // MARK: - INITIALIZERS
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
@@ -39,12 +45,16 @@ final class CNHyperlinkTextView: UITextView {
             
             let attributes: [NSAttributedString.Key : Any] = [
                 .link: stringUrl,
-                .font: UIFont.systemFont(ofSize: fontSize, weight: .bold),
+                .font: UIFont.inter(ofSize: fontSize, weight: .bold),
                 .underlineStyle: NSUnderlineStyle.single.rawValue
             ]
             mutableString.addAttributes(attributes, range: linkRange)
         }
         attributedText = mutableString
+    }
+    
+    func setHyperlinkColor(_ color: UIColor?) {
+        tintColor = color
     }
     
     // MARK: - SETUP VIEW
@@ -63,7 +73,6 @@ final class CNHyperlinkTextView: UITextView {
     
     private func customizeTextView() {
         backgroundColor = .clear
-        tintColor = textColor
     }
 }
 

@@ -12,11 +12,14 @@ final class CNFlowController {
     // MARK: - PROPERTIES
     
     var rootNavigation: UINavigationController?
-    let factory = CNFactory()
+    let factory: CNFactory
+    private let services: CNServicesControllerProtocol
     
     // MARK: - INITIALIZERS
     
     init() {
+        services = CNServicesController()
+        factory = CNFactory(services: services)
         setupRootNavigation()
         customizeNavigationStyle()
     }
@@ -24,7 +27,7 @@ final class CNFlowController {
     // MARK: - PRIVATE METHODS
     
     private func setupRootNavigation() {
-        let rootController = factory.makeOnboardingViewController()
+        let rootController = factory.makeOnboardingHomeViewController()
         rootController.delegate = self
         rootNavigation = UINavigationController(rootViewController: rootController)
     }

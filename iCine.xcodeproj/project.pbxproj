@@ -11,49 +11,64 @@
 		CF4874FD2AD22A5F0056EE78 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4874FC2AD22A5F0056EE78 /* BottomSheetViewController.swift */; };
 		CF4874FF2AD22A760056EE78 /* PresentedSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4874FE2AD22A760056EE78 /* PresentedSheetViewController.swift */; };
 		CF4875012AD23CFB0056EE78 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4875002AD23CFB0056EE78 /* UIViewControllerExtensions.swift */; };
-		CF4875032AD23F7E0056EE78 /* CNLoginRequestErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4875022AD23F7E0056EE78 /* CNLoginRequestErrorView.swift */; };
+		CF4875032AD23F7E0056EE78 /* CNOnboardingLoginRequestErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4875022AD23F7E0056EE78 /* CNOnboardingLoginRequestErrorView.swift */; };
 		CF522C9E2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522C9D2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift */; };
 		CF522CA32AC3C29E00F984A2 /* CNNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CA22AC3C29E00F984A2 /* CNNetworkController.swift */; };
 		CF522CA52AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CA42AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift */; };
 		CF522CA72AC3C33300F984A2 /* CNNetworkRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CA62AC3C33300F984A2 /* CNNetworkRequestProtocol.swift */; };
 		CF522CA92AC3C3AC00F984A2 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CA82AC3C3AC00F984A2 /* DataExtensions.swift */; };
 		CF522CAB2AC3C3D700F984A2 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CAA2AC3C3D700F984A2 /* EncodableExtensions.swift */; };
-		CF522CAF2AC3C42600F984A2 /* CNLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CAE2AC3C42600F984A2 /* CNLoginRequest.swift */; };
-		CF522CB32AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CB22AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift */; };
+		CF522CAF2AC3C42600F984A2 /* CNOnboardingLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CAE2AC3C42600F984A2 /* CNOnboardingLoginRequest.swift */; };
+		CF522CB32AC3C50700F984A2 /* CNOnboardingLoginRequestTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF522CB22AC3C50700F984A2 /* CNOnboardingLoginRequestTokenResponse.swift */; };
 		CF53C2122ABF4FCF00E6C8A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C2112ABF4FCF00E6C8A6 /* AppDelegate.swift */; };
 		CF53C2142ABF4FCF00E6C8A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C2132ABF4FCF00E6C8A6 /* SceneDelegate.swift */; };
 		CF53C21B2ABF4FD000E6C8A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF53C21A2ABF4FD000E6C8A6 /* Assets.xcassets */; };
 		CF53C21E2ABF4FD000E6C8A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF53C21C2ABF4FD000E6C8A6 /* LaunchScreen.storyboard */; };
-		CF53C22B2ABF54F300E6C8A6 /* CNOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C22A2ABF54F300E6C8A6 /* CNOnboardingViewController.swift */; };
-		CF53C22D2ABF553400E6C8A6 /* CNOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C22C2ABF553400E6C8A6 /* CNOnboardingViewModel.swift */; };
-		CF53C22F2ABF554B00E6C8A6 /* CNOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C22E2ABF554B00E6C8A6 /* CNOnboardingView.swift */; };
-		CF53C2322ABF55F900E6C8A6 /* CNOnboardingViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C2312ABF55F900E6C8A6 /* CNOnboardingViewState.swift */; };
-		CF61A79B2AC0A359004B1D9F /* CNLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A79A2AC0A359004B1D9F /* CNLoginViewController.swift */; };
-		CF61A79D2AC0A3F5004B1D9F /* CNLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A79C2AC0A3F5004B1D9F /* CNLoginViewModel.swift */; };
-		CF61A79F2AC0A3FC004B1D9F /* CNLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A79E2AC0A3FC004B1D9F /* CNLoginView.swift */; };
-		CF61A7A12AC0A404004B1D9F /* CNLoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A02AC0A404004B1D9F /* CNLoginViewState.swift */; };
-		CF61A7A42AC0A868004B1D9F /* CNLoginHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A32AC0A868004B1D9F /* CNLoginHeaderSectionView.swift */; };
+		CF53C22B2ABF54F300E6C8A6 /* CNOnboardingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C22A2ABF54F300E6C8A6 /* CNOnboardingHomeViewController.swift */; };
+		CF53C22D2ABF553400E6C8A6 /* CNOnboardingHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C22C2ABF553400E6C8A6 /* CNOnboardingHomeViewModel.swift */; };
+		CF53C22F2ABF554B00E6C8A6 /* CNOnboardingHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C22E2ABF554B00E6C8A6 /* CNOnboardingHomeView.swift */; };
+		CF53C2322ABF55F900E6C8A6 /* CNOnboardingHomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53C2312ABF55F900E6C8A6 /* CNOnboardingHomeViewState.swift */; };
+		CF56899F2AD9D67F00501A9A /* CNServicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF56899E2AD9D67F00501A9A /* CNServicesController.swift */; };
+		CF5689A12AD9D84100501A9A /* CNUserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5689A02AD9D84100501A9A /* CNUserDefaultsProtocol.swift */; };
+		CF5689A42AD9D8D900501A9A /* CNServicesControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5689A32AD9D8D900501A9A /* CNServicesControllerProtocol.swift */; };
+		CF5689A72AD9DB7700501A9A /* CNUserDefaultsCommonsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5689A62AD9DB7700501A9A /* CNUserDefaultsCommonsEnum.swift */; };
+		CF5689B62AD9E61C00501A9A /* CNCustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5689B52AD9E61C00501A9A /* CNCustomFonts.swift */; };
+		CF5689B82AD9E8D900501A9A /* CNFontWeightEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5689B72AD9E8D900501A9A /* CNFontWeightEnum.swift */; };
+		CF5689C22AD9EAF600501A9A /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF5689B92AD9EAF600501A9A /* Inter-Regular.ttf */; };
+		CF5689C32AD9EAF600501A9A /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF5689BA2AD9EAF600501A9A /* Inter-Thin.ttf */; };
+		CF5689C42AD9EAF600501A9A /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF5689BB2AD9EAF600501A9A /* Inter-ExtraBold.ttf */; };
+		CF5689C52AD9EAF600501A9A /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF5689BC2AD9EAF600501A9A /* Inter-Black.ttf */; };
+		CF5689C62AD9EAF600501A9A /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF5689BD2AD9EAF600501A9A /* Inter-Medium.ttf */; };
+		CF5689C72AD9EAF600501A9A /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF5689BE2AD9EAF600501A9A /* Inter-SemiBold.ttf */; };
+		CF5689C82AD9EAF600501A9A /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF5689BF2AD9EAF600501A9A /* Inter-Bold.ttf */; };
+		CF5689C92AD9EAF600501A9A /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF5689C02AD9EAF600501A9A /* Inter-ExtraLight.ttf */; };
+		CF5689CA2AD9EAF600501A9A /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF5689C12AD9EAF600501A9A /* Inter-Light.ttf */; };
+		CF61A79B2AC0A359004B1D9F /* CNOnboardingLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A79A2AC0A359004B1D9F /* CNOnboardingLoginViewController.swift */; };
+		CF61A79D2AC0A3F5004B1D9F /* CNOnboardingLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A79C2AC0A3F5004B1D9F /* CNOnboardingLoginViewModel.swift */; };
+		CF61A79F2AC0A3FC004B1D9F /* CNOnboardingLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A79E2AC0A3FC004B1D9F /* CNOnboardingLoginView.swift */; };
+		CF61A7A12AC0A404004B1D9F /* CNOnboardingLoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A02AC0A404004B1D9F /* CNOnboardingLoginViewState.swift */; };
+		CF61A7A42AC0A868004B1D9F /* CNOnboardingLoginHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A32AC0A868004B1D9F /* CNOnboardingLoginHeaderSectionView.swift */; };
 		CF61A7A82AC0A8D4004B1D9F /* CNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A72AC0A8D4004B1D9F /* CNTextField.swift */; };
-		CF61A7AA2AC0C31E004B1D9F /* CNLoginFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A92AC0C31E004B1D9F /* CNLoginFooterSectionView.swift */; };
-		CF8537CD2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537CC2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift */; };
-		CF8537CF2ACBB0CD007E42E5 /* CNLoginUserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537CE2ACBB0CD007E42E5 /* CNLoginUserCredentials.swift */; };
-		CF8537D32ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537D22ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift */; };
-		CF8537D52ACBB908007E42E5 /* CNLoginAccountDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537D42ACBB908007E42E5 /* CNLoginAccountDetailsResponse.swift */; };
-		CFA9FEB32ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB22ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift */; };
-		CFA9FEB62ABF642B0032555C /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB52ABF642B0032555C /* UIImageExtensions.swift */; };
-		CFA9FEB82ABF67680032555C /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB72ABF67680032555C /* UIColorExtensions.swift */; };
+		CF61A7AA2AC0C31E004B1D9F /* CNOnboardingLoginFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF61A7A92AC0C31E004B1D9F /* CNOnboardingLoginFooterSectionView.swift */; };
+		CF8537CD2ACBAEC2007E42E5 /* CNOnboardingLoginValidateTokenPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537CC2ACBAEC2007E42E5 /* CNOnboardingLoginValidateTokenPayload.swift */; };
+		CF8537CF2ACBB0CD007E42E5 /* CNOnboardingLoginUserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537CE2ACBB0CD007E42E5 /* CNOnboardingLoginUserCredentials.swift */; };
+		CF8537D32ACBB732007E42E5 /* CNOnboardingLoginCreateSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537D22ACBB732007E42E5 /* CNOnboardingLoginCreateSessionResponse.swift */; };
+		CF8537D52ACBB908007E42E5 /* CNOnboardingLoginAccountDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8537D42ACBB908007E42E5 /* CNOnboardingLoginAccountDetailsResponse.swift */; };
+		CFA9FEB32ABF612E0032555C /* CNOnboardingHomeBackgroundSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB22ABF612E0032555C /* CNOnboardingHomeBackgroundSectionView.swift */; };
+		CFA9FEB62ABF642B0032555C /* CNCustomImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB52ABF642B0032555C /* CNCustomImages.swift */; };
+		CFA9FEB82ABF67680032555C /* CNCustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB72ABF67680032555C /* CNCustomColors.swift */; };
 		CFA9FEBA2ABF6A510032555C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEB92ABF6A510032555C /* UIViewExtensions.swift */; };
-		CFA9FEBC2ABF781C0032555C /* CNOnboardingBodySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEBB2ABF781C0032555C /* CNOnboardingBodySectionView.swift */; };
+		CFA9FEBC2ABF781C0032555C /* CNOnboardingHomeBodySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEBB2ABF781C0032555C /* CNOnboardingHomeBodySectionView.swift */; };
 		CFA9FEBE2ABF7D190032555C /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEBD2ABF7D190032555C /* UIStackViewExtensions.swift */; };
 		CFA9FEC12ABFB6F60032555C /* CNButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEC02ABFB6F60032555C /* CNButton.swift */; };
-		CFA9FEC32ABFBA170032555C /* CNOnboardingFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEC22ABFBA170032555C /* CNOnboardingFooterSectionView.swift */; };
+		CFA9FEC32ABFBA170032555C /* CNOnboardingHomeFooterSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEC22ABFBA170032555C /* CNOnboardingHomeFooterSectionView.swift */; };
 		CFA9FEC62ABFC2510032555C /* CNFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEC52ABFC2510032555C /* CNFlowController.swift */; };
 		CFA9FEC82ABFC3070032555C /* CNFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEC72ABFC3070032555C /* CNFactory.swift */; };
 		CFA9FECB2ABFC4A60032555C /* CNFlowController+Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FECA2ABFC4A60032555C /* CNFlowController+Onboarding.swift */; };
 		CFC7288B2ACE4F6B00DAF2B2 /* button_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CFC7288A2ACE4F6B00DAF2B2 /* button_loading.json */; };
-		CFEE5A2E2AD8C8CD009E581C /* CNLoginHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A2D2AD8C8CD009E581C /* CNLoginHelpView.swift */; };
+		CFEE5A2E2AD8C8CD009E581C /* CNOnboardingLoginHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A2D2AD8C8CD009E581C /* CNOnboardingLoginHelpView.swift */; };
 		CFEE5A312AD8D379009E581C /* CNHyperlinkTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A302AD8D379009E581C /* CNHyperlinkTextView.swift */; };
-		CFEE5A332AD8DD39009E581C /* CNPersistentDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A322AD8DD39009E581C /* CNPersistentDataViewController.swift */; };
+		CFEE5A332AD8DD39009E581C /* CNUserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A322AD8DD39009E581C /* CNUserDefaultsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,51 +78,66 @@
 		CF4874FC2AD22A5F0056EE78 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		CF4874FE2AD22A760056EE78 /* PresentedSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedSheetViewController.swift; sourceTree = "<group>"; };
 		CF4875002AD23CFB0056EE78 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		CF4875022AD23F7E0056EE78 /* CNLoginRequestErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginRequestErrorView.swift; sourceTree = "<group>"; };
+		CF4875022AD23F7E0056EE78 /* CNOnboardingLoginRequestErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginRequestErrorView.swift; sourceTree = "<group>"; };
 		CF522C9D2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicKeyboardHeightViewController.swift; sourceTree = "<group>"; };
 		CF522CA22AC3C29E00F984A2 /* CNNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNetworkController.swift; sourceTree = "<group>"; };
 		CF522CA42AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNetworkControllerProtocol.swift; sourceTree = "<group>"; };
 		CF522CA62AC3C33300F984A2 /* CNNetworkRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNetworkRequestProtocol.swift; sourceTree = "<group>"; };
 		CF522CA82AC3C3AC00F984A2 /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
 		CF522CAA2AC3C3D700F984A2 /* EncodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
-		CF522CAE2AC3C42600F984A2 /* CNLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginRequest.swift; sourceTree = "<group>"; };
-		CF522CB22AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginRequestTokenResponse.swift; sourceTree = "<group>"; };
+		CF522CAE2AC3C42600F984A2 /* CNOnboardingLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginRequest.swift; sourceTree = "<group>"; };
+		CF522CB22AC3C50700F984A2 /* CNOnboardingLoginRequestTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginRequestTokenResponse.swift; sourceTree = "<group>"; };
 		CF53C20E2ABF4FCF00E6C8A6 /* iCine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF53C2112ABF4FCF00E6C8A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF53C2132ABF4FCF00E6C8A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF53C21A2ABF4FD000E6C8A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF53C21D2ABF4FD000E6C8A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF53C21F2ABF4FD000E6C8A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF53C22A2ABF54F300E6C8A6 /* CNOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingViewController.swift; sourceTree = "<group>"; };
-		CF53C22C2ABF553400E6C8A6 /* CNOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingViewModel.swift; sourceTree = "<group>"; };
-		CF53C22E2ABF554B00E6C8A6 /* CNOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingView.swift; sourceTree = "<group>"; };
-		CF53C2312ABF55F900E6C8A6 /* CNOnboardingViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingViewState.swift; sourceTree = "<group>"; };
-		CF61A79A2AC0A359004B1D9F /* CNLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginViewController.swift; sourceTree = "<group>"; };
-		CF61A79C2AC0A3F5004B1D9F /* CNLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginViewModel.swift; sourceTree = "<group>"; };
-		CF61A79E2AC0A3FC004B1D9F /* CNLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginView.swift; sourceTree = "<group>"; };
-		CF61A7A02AC0A404004B1D9F /* CNLoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginViewState.swift; sourceTree = "<group>"; };
-		CF61A7A32AC0A868004B1D9F /* CNLoginHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginHeaderSectionView.swift; sourceTree = "<group>"; };
+		CF53C22A2ABF54F300E6C8A6 /* CNOnboardingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingHomeViewController.swift; sourceTree = "<group>"; };
+		CF53C22C2ABF553400E6C8A6 /* CNOnboardingHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingHomeViewModel.swift; sourceTree = "<group>"; };
+		CF53C22E2ABF554B00E6C8A6 /* CNOnboardingHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingHomeView.swift; sourceTree = "<group>"; };
+		CF53C2312ABF55F900E6C8A6 /* CNOnboardingHomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingHomeViewState.swift; sourceTree = "<group>"; };
+		CF56899E2AD9D67F00501A9A /* CNServicesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNServicesController.swift; sourceTree = "<group>"; };
+		CF5689A02AD9D84100501A9A /* CNUserDefaultsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNUserDefaultsProtocol.swift; sourceTree = "<group>"; };
+		CF5689A32AD9D8D900501A9A /* CNServicesControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNServicesControllerProtocol.swift; sourceTree = "<group>"; };
+		CF5689A62AD9DB7700501A9A /* CNUserDefaultsCommonsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNUserDefaultsCommonsEnum.swift; sourceTree = "<group>"; };
+		CF5689B52AD9E61C00501A9A /* CNCustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNCustomFonts.swift; sourceTree = "<group>"; };
+		CF5689B72AD9E8D900501A9A /* CNFontWeightEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNFontWeightEnum.swift; sourceTree = "<group>"; };
+		CF5689B92AD9EAF600501A9A /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		CF5689BA2AD9EAF600501A9A /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		CF5689BB2AD9EAF600501A9A /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CF5689BC2AD9EAF600501A9A /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		CF5689BD2AD9EAF600501A9A /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		CF5689BE2AD9EAF600501A9A /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		CF5689BF2AD9EAF600501A9A /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		CF5689C02AD9EAF600501A9A /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CF5689C12AD9EAF600501A9A /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		CF61A79A2AC0A359004B1D9F /* CNOnboardingLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginViewController.swift; sourceTree = "<group>"; };
+		CF61A79C2AC0A3F5004B1D9F /* CNOnboardingLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginViewModel.swift; sourceTree = "<group>"; };
+		CF61A79E2AC0A3FC004B1D9F /* CNOnboardingLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginView.swift; sourceTree = "<group>"; };
+		CF61A7A02AC0A404004B1D9F /* CNOnboardingLoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginViewState.swift; sourceTree = "<group>"; };
+		CF61A7A32AC0A868004B1D9F /* CNOnboardingLoginHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginHeaderSectionView.swift; sourceTree = "<group>"; };
 		CF61A7A72AC0A8D4004B1D9F /* CNTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNTextField.swift; sourceTree = "<group>"; };
-		CF61A7A92AC0C31E004B1D9F /* CNLoginFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginFooterSectionView.swift; sourceTree = "<group>"; };
-		CF8537CC2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginValidateTokenPayload.swift; sourceTree = "<group>"; };
-		CF8537CE2ACBB0CD007E42E5 /* CNLoginUserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginUserCredentials.swift; sourceTree = "<group>"; };
-		CF8537D22ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginCreateSessionResponse.swift; sourceTree = "<group>"; };
-		CF8537D42ACBB908007E42E5 /* CNLoginAccountDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginAccountDetailsResponse.swift; sourceTree = "<group>"; };
-		CFA9FEB22ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingBackgroundSectionView.swift; sourceTree = "<group>"; };
-		CFA9FEB52ABF642B0032555C /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
-		CFA9FEB72ABF67680032555C /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		CF61A7A92AC0C31E004B1D9F /* CNOnboardingLoginFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginFooterSectionView.swift; sourceTree = "<group>"; };
+		CF8537CC2ACBAEC2007E42E5 /* CNOnboardingLoginValidateTokenPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginValidateTokenPayload.swift; sourceTree = "<group>"; };
+		CF8537CE2ACBB0CD007E42E5 /* CNOnboardingLoginUserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginUserCredentials.swift; sourceTree = "<group>"; };
+		CF8537D22ACBB732007E42E5 /* CNOnboardingLoginCreateSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginCreateSessionResponse.swift; sourceTree = "<group>"; };
+		CF8537D42ACBB908007E42E5 /* CNOnboardingLoginAccountDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginAccountDetailsResponse.swift; sourceTree = "<group>"; };
+		CFA9FEB22ABF612E0032555C /* CNOnboardingHomeBackgroundSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingHomeBackgroundSectionView.swift; sourceTree = "<group>"; };
+		CFA9FEB52ABF642B0032555C /* CNCustomImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNCustomImages.swift; sourceTree = "<group>"; };
+		CFA9FEB72ABF67680032555C /* CNCustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNCustomColors.swift; sourceTree = "<group>"; };
 		CFA9FEB92ABF6A510032555C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		CFA9FEBB2ABF781C0032555C /* CNOnboardingBodySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingBodySectionView.swift; sourceTree = "<group>"; };
+		CFA9FEBB2ABF781C0032555C /* CNOnboardingHomeBodySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingHomeBodySectionView.swift; sourceTree = "<group>"; };
 		CFA9FEBD2ABF7D190032555C /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		CFA9FEC02ABFB6F60032555C /* CNButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNButton.swift; sourceTree = "<group>"; };
-		CFA9FEC22ABFBA170032555C /* CNOnboardingFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingFooterSectionView.swift; sourceTree = "<group>"; };
+		CFA9FEC22ABFBA170032555C /* CNOnboardingHomeFooterSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingHomeFooterSectionView.swift; sourceTree = "<group>"; };
 		CFA9FEC52ABFC2510032555C /* CNFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNFlowController.swift; sourceTree = "<group>"; };
 		CFA9FEC72ABFC3070032555C /* CNFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNFactory.swift; sourceTree = "<group>"; };
 		CFA9FECA2ABFC4A60032555C /* CNFlowController+Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CNFlowController+Onboarding.swift"; sourceTree = "<group>"; };
 		CFC7288A2ACE4F6B00DAF2B2 /* button_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = button_loading.json; sourceTree = "<group>"; };
-		CFEE5A2D2AD8C8CD009E581C /* CNLoginHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginHelpView.swift; sourceTree = "<group>"; };
+		CFEE5A2D2AD8C8CD009E581C /* CNOnboardingLoginHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginHelpView.swift; sourceTree = "<group>"; };
 		CFEE5A302AD8D379009E581C /* CNHyperlinkTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNHyperlinkTextView.swift; sourceTree = "<group>"; };
-		CFEE5A322AD8DD39009E581C /* CNPersistentDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPersistentDataViewController.swift; sourceTree = "<group>"; };
+		CFEE5A322AD8DD39009E581C /* CNUserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNUserDefaultsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +189,8 @@
 		CF522CA02AC3BC1000F984A2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CFEE5A342AD8DD3E009E581C /* PersistentData */,
+				CF5689A22AD9D8B300501A9A /* Controller */,
+				CFEE5A342AD8DD3E009E581C /* UserDefaults */,
 				CF522CA12AC3BC2800F984A2 /* Network */,
 			);
 			path = Services;
@@ -173,41 +204,6 @@
 				CF522CA62AC3C33300F984A2 /* CNNetworkRequestProtocol.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		CF522CAC2AC3C3FE00F984A2 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				CF522CAD2AC3C41000F984A2 /* Login */,
-			);
-			path = Requests;
-			sourceTree = "<group>";
-		};
-		CF522CAD2AC3C41000F984A2 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				CF522CAE2AC3C42600F984A2 /* CNLoginRequest.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		CF522CB02AC3C49900F984A2 /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-				CF522CB12AC3C4E500F984A2 /* Login */,
-			);
-			path = Responses;
-			sourceTree = "<group>";
-		};
-		CF522CB12AC3C4E500F984A2 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				CF522CB22AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift */,
-				CF8537D22ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift */,
-				CF8537D42ACBB908007E42E5 /* CNLoginAccountDetailsResponse.swift */,
-				CF8537CE2ACBB0CD007E42E5 /* CNLoginUserCredentials.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		CF53C2052ABF4FCF00E6C8A6 = {
@@ -255,53 +251,195 @@
 		CF53C2262ABF540900E6C8A6 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				CF8537CA2ACBAE9B007E42E5 /* Payloads */,
 				CFA9FEC92ABFC4950032555C /* Flow */,
-				CF522CAC2AC3C3FE00F984A2 /* Requests */,
-				CF522CB02AC3C49900F984A2 /* Responses */,
-				CF53C2292ABF546A00E6C8A6 /* Scenes */,
+				CF5689922AD9CEBB00501A9A /* Home */,
+				CF5689932AD9CEC100501A9A /* Login */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		CF53C2272ABF544800E6C8A6 /* Onboarding */ = {
+		CF53C2272ABF544800E6C8A6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CF53C22A2ABF54F300E6C8A6 /* CNOnboardingViewController.swift */,
-				CF53C22C2ABF553400E6C8A6 /* CNOnboardingViewModel.swift */,
-				CF53C2312ABF55F900E6C8A6 /* CNOnboardingViewState.swift */,
-				CF53C22E2ABF554B00E6C8A6 /* CNOnboardingView.swift */,
+				CF53C22A2ABF54F300E6C8A6 /* CNOnboardingHomeViewController.swift */,
+				CF53C22C2ABF553400E6C8A6 /* CNOnboardingHomeViewModel.swift */,
+				CF53C2312ABF55F900E6C8A6 /* CNOnboardingHomeViewState.swift */,
+				CF53C22E2ABF554B00E6C8A6 /* CNOnboardingHomeView.swift */,
 				CF53C2302ABF558400E6C8A6 /* ViewSections */,
 			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		CF53C2292ABF546A00E6C8A6 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				CF53C2272ABF544800E6C8A6 /* Onboarding */,
-				CF61A7992AC0A315004B1D9F /* Login */,
-			);
-			path = Scenes;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		CF53C2302ABF558400E6C8A6 /* ViewSections */ = {
 			isa = PBXGroup;
 			children = (
-				CFA9FEB22ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift */,
-				CFA9FEBB2ABF781C0032555C /* CNOnboardingBodySectionView.swift */,
-				CFA9FEC22ABFBA170032555C /* CNOnboardingFooterSectionView.swift */,
+				CFA9FEB22ABF612E0032555C /* CNOnboardingHomeBackgroundSectionView.swift */,
+				CFA9FEBB2ABF781C0032555C /* CNOnboardingHomeBodySectionView.swift */,
+				CFA9FEC22ABFBA170032555C /* CNOnboardingHomeFooterSectionView.swift */,
 			);
 			path = ViewSections;
+			sourceTree = "<group>";
+		};
+		CF5689922AD9CEBB00501A9A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CF5689962AD9CF1900501A9A /* Services */,
+				CF5689952AD9CEEF00501A9A /* Scenes */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CF5689932AD9CEC100501A9A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CF56899A2AD9CF7600501A9A /* Services */,
+				CF5689942AD9CEE800501A9A /* Scenes */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CF5689942AD9CEE800501A9A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CF61A7992AC0A315004B1D9F /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CF5689952AD9CEEF00501A9A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CF53C2272ABF544800E6C8A6 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CF5689962AD9CF1900501A9A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF5689982AD9CF4A00501A9A /* Requests */,
+				CF5689972AD9CF4100501A9A /* Payloads */,
+				CF5689992AD9CF4F00501A9A /* Responses */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF5689972AD9CF4100501A9A /* Payloads */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Payloads;
+			sourceTree = "<group>";
+		};
+		CF5689982AD9CF4A00501A9A /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		CF5689992AD9CF4F00501A9A /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		CF56899A2AD9CF7600501A9A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF56899C2AD9CF8C00501A9A /* Requests */,
+				CF56899D2AD9CF9500501A9A /* Payloads */,
+				CF56899B2AD9CF8500501A9A /* Responses */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF56899B2AD9CF8500501A9A /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				CF522CB22AC3C50700F984A2 /* CNOnboardingLoginRequestTokenResponse.swift */,
+				CF8537D22ACBB732007E42E5 /* CNOnboardingLoginCreateSessionResponse.swift */,
+				CF8537D42ACBB908007E42E5 /* CNOnboardingLoginAccountDetailsResponse.swift */,
+				CF8537CE2ACBB0CD007E42E5 /* CNOnboardingLoginUserCredentials.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		CF56899C2AD9CF8C00501A9A /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CF522CAE2AC3C42600F984A2 /* CNOnboardingLoginRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		CF56899D2AD9CF9500501A9A /* Payloads */ = {
+			isa = PBXGroup;
+			children = (
+				CF8537CC2ACBAEC2007E42E5 /* CNOnboardingLoginValidateTokenPayload.swift */,
+			);
+			path = Payloads;
+			sourceTree = "<group>";
+		};
+		CF5689A22AD9D8B300501A9A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF56899E2AD9D67F00501A9A /* CNServicesController.swift */,
+				CF5689A32AD9D8D900501A9A /* CNServicesControllerProtocol.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF5689A82AD9E44100501A9A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CF5689B52AD9E61C00501A9A /* CNCustomFonts.swift */,
+				CF5689B72AD9E8D900501A9A /* CNFontWeightEnum.swift */,
+				CF5689A92AD9E44700501A9A /* Inter */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CF5689A92AD9E44700501A9A /* Inter */ = {
+			isa = PBXGroup;
+			children = (
+				CF5689BC2AD9EAF600501A9A /* Inter-Black.ttf */,
+				CF5689BF2AD9EAF600501A9A /* Inter-Bold.ttf */,
+				CF5689BB2AD9EAF600501A9A /* Inter-ExtraBold.ttf */,
+				CF5689C02AD9EAF600501A9A /* Inter-ExtraLight.ttf */,
+				CF5689C12AD9EAF600501A9A /* Inter-Light.ttf */,
+				CF5689BD2AD9EAF600501A9A /* Inter-Medium.ttf */,
+				CF5689B92AD9EAF600501A9A /* Inter-Regular.ttf */,
+				CF5689BE2AD9EAF600501A9A /* Inter-SemiBold.ttf */,
+				CF5689BA2AD9EAF600501A9A /* Inter-Thin.ttf */,
+			);
+			path = Inter;
+			sourceTree = "<group>";
+		};
+		CF5689B32AD9E5B500501A9A /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				CFA9FEB72ABF67680032555C /* CNCustomColors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		CF5689B42AD9E5BE00501A9A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CFA9FEB52ABF642B0032555C /* CNCustomImages.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		CF61A7992AC0A315004B1D9F /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				CF61A79A2AC0A359004B1D9F /* CNLoginViewController.swift */,
-				CF61A79C2AC0A3F5004B1D9F /* CNLoginViewModel.swift */,
-				CF61A7A02AC0A404004B1D9F /* CNLoginViewState.swift */,
-				CF61A79E2AC0A3FC004B1D9F /* CNLoginView.swift */,
+				CF61A79A2AC0A359004B1D9F /* CNOnboardingLoginViewController.swift */,
+				CF61A79C2AC0A3F5004B1D9F /* CNOnboardingLoginViewModel.swift */,
+				CF61A7A02AC0A404004B1D9F /* CNOnboardingLoginViewState.swift */,
+				CF61A79E2AC0A3FC004B1D9F /* CNOnboardingLoginView.swift */,
 				CF61A7A22AC0A408004B1D9F /* ViewSections */,
 			);
 			path = Login;
@@ -310,10 +448,10 @@
 		CF61A7A22AC0A408004B1D9F /* ViewSections */ = {
 			isa = PBXGroup;
 			children = (
-				CF61A7A32AC0A868004B1D9F /* CNLoginHeaderSectionView.swift */,
-				CF61A7A92AC0C31E004B1D9F /* CNLoginFooterSectionView.swift */,
-				CF4875022AD23F7E0056EE78 /* CNLoginRequestErrorView.swift */,
-				CFEE5A2D2AD8C8CD009E581C /* CNLoginHelpView.swift */,
+				CF61A7A32AC0A868004B1D9F /* CNOnboardingLoginHeaderSectionView.swift */,
+				CF61A7A92AC0C31E004B1D9F /* CNOnboardingLoginFooterSectionView.swift */,
+				CF4875022AD23F7E0056EE78 /* CNOnboardingLoginRequestErrorView.swift */,
+				CFEE5A2D2AD8C8CD009E581C /* CNOnboardingLoginHelpView.swift */,
 			);
 			path = ViewSections;
 			sourceTree = "<group>";
@@ -334,28 +472,10 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
-		CF8537CA2ACBAE9B007E42E5 /* Payloads */ = {
-			isa = PBXGroup;
-			children = (
-				CF8537CB2ACBAEA8007E42E5 /* Login */,
-			);
-			path = Payloads;
-			sourceTree = "<group>";
-		};
-		CF8537CB2ACBAEA8007E42E5 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				CF8537CC2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		CFA9FEB42ABF63D00032555C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				CFA9FEB92ABF6A510032555C /* UIViewExtensions.swift */,
-				CFA9FEB52ABF642B0032555C /* UIImageExtensions.swift */,
-				CFA9FEB72ABF67680032555C /* UIColorExtensions.swift */,
 				CFA9FEBD2ABF7D190032555C /* UIStackViewExtensions.swift */,
 				CF522CA82AC3C3AC00F984A2 /* DataExtensions.swift */,
 				CF522CAA2AC3C3D700F984A2 /* EncodableExtensions.swift */,
@@ -396,6 +516,9 @@
 		CFA9FECC2ABFC6E00032555C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CF5689B42AD9E5BE00501A9A /* Images */,
+				CF5689B32AD9E5B500501A9A /* Colors */,
+				CF5689A82AD9E44100501A9A /* Fonts */,
 				CFC728872ACE4B1900DAF2B2 /* Animations */,
 				CF53C21A2ABF4FD000E6C8A6 /* Assets.xcassets */,
 				CF53C21C2ABF4FD000E6C8A6 /* LaunchScreen.storyboard */,
@@ -419,12 +542,14 @@
 			path = Hyperlink;
 			sourceTree = "<group>";
 		};
-		CFEE5A342AD8DD3E009E581C /* PersistentData */ = {
+		CFEE5A342AD8DD3E009E581C /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				CFEE5A322AD8DD39009E581C /* CNPersistentDataViewController.swift */,
+				CFEE5A322AD8DD39009E581C /* CNUserDefaultsController.swift */,
+				CF5689A02AD9D84100501A9A /* CNUserDefaultsProtocol.swift */,
+				CF5689A62AD9DB7700501A9A /* CNUserDefaultsCommonsEnum.swift */,
 			);
-			path = PersistentData;
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,7 +614,16 @@
 			files = (
 				CF53C21E2ABF4FD000E6C8A6 /* LaunchScreen.storyboard in Resources */,
 				CF53C21B2ABF4FD000E6C8A6 /* Assets.xcassets in Resources */,
+				CF5689C22AD9EAF600501A9A /* Inter-Regular.ttf in Resources */,
+				CF5689C72AD9EAF600501A9A /* Inter-SemiBold.ttf in Resources */,
+				CF5689C32AD9EAF600501A9A /* Inter-Thin.ttf in Resources */,
+				CF5689C62AD9EAF600501A9A /* Inter-Medium.ttf in Resources */,
+				CF5689C82AD9EAF600501A9A /* Inter-Bold.ttf in Resources */,
 				CFC7288B2ACE4F6B00DAF2B2 /* button_loading.json in Resources */,
+				CF5689C92AD9EAF600501A9A /* Inter-ExtraLight.ttf in Resources */,
+				CF5689C42AD9EAF600501A9A /* Inter-ExtraBold.ttf in Resources */,
+				CF5689CA2AD9EAF600501A9A /* Inter-Light.ttf in Resources */,
+				CF5689C52AD9EAF600501A9A /* Inter-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,47 +676,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFA9FEB82ABF67680032555C /* UIColorExtensions.swift in Sources */,
-				CF61A79F2AC0A3FC004B1D9F /* CNLoginView.swift in Sources */,
+				CFA9FEB82ABF67680032555C /* CNCustomColors.swift in Sources */,
+				CF61A79F2AC0A3FC004B1D9F /* CNOnboardingLoginView.swift in Sources */,
 				CF61A7A82AC0A8D4004B1D9F /* CNTextField.swift in Sources */,
 				CF522CA32AC3C29E00F984A2 /* CNNetworkController.swift in Sources */,
-				CF8537CF2ACBB0CD007E42E5 /* CNLoginUserCredentials.swift in Sources */,
-				CF61A79B2AC0A359004B1D9F /* CNLoginViewController.swift in Sources */,
+				CF8537CF2ACBB0CD007E42E5 /* CNOnboardingLoginUserCredentials.swift in Sources */,
+				CF61A79B2AC0A359004B1D9F /* CNOnboardingLoginViewController.swift in Sources */,
 				CFA9FEC62ABFC2510032555C /* CNFlowController.swift in Sources */,
-				CF53C22F2ABF554B00E6C8A6 /* CNOnboardingView.swift in Sources */,
+				CF53C22F2ABF554B00E6C8A6 /* CNOnboardingHomeView.swift in Sources */,
 				CFA9FEC82ABFC3070032555C /* CNFactory.swift in Sources */,
 				CFA9FEC12ABFB6F60032555C /* CNButton.swift in Sources */,
-				CFEE5A2E2AD8C8CD009E581C /* CNLoginHelpView.swift in Sources */,
-				CFA9FEBC2ABF781C0032555C /* CNOnboardingBodySectionView.swift in Sources */,
-				CF53C22D2ABF553400E6C8A6 /* CNOnboardingViewModel.swift in Sources */,
+				CF5689A12AD9D84100501A9A /* CNUserDefaultsProtocol.swift in Sources */,
+				CF56899F2AD9D67F00501A9A /* CNServicesController.swift in Sources */,
+				CFEE5A2E2AD8C8CD009E581C /* CNOnboardingLoginHelpView.swift in Sources */,
+				CFA9FEBC2ABF781C0032555C /* CNOnboardingHomeBodySectionView.swift in Sources */,
+				CF53C22D2ABF553400E6C8A6 /* CNOnboardingHomeViewModel.swift in Sources */,
 				CFEE5A312AD8D379009E581C /* CNHyperlinkTextView.swift in Sources */,
 				CFA9FECB2ABFC4A60032555C /* CNFlowController+Onboarding.swift in Sources */,
-				CF61A7A12AC0A404004B1D9F /* CNLoginViewState.swift in Sources */,
+				CF61A7A12AC0A404004B1D9F /* CNOnboardingLoginViewState.swift in Sources */,
+				CF5689B82AD9E8D900501A9A /* CNFontWeightEnum.swift in Sources */,
 				CF522CA92AC3C3AC00F984A2 /* DataExtensions.swift in Sources */,
-				CFA9FEB32ABF612E0032555C /* CNOnboardingBackgroundSectionView.swift in Sources */,
-				CF8537CD2ACBAEC2007E42E5 /* CNLoginValidateTokenPayload.swift in Sources */,
-				CF4875032AD23F7E0056EE78 /* CNLoginRequestErrorView.swift in Sources */,
-				CF61A7A42AC0A868004B1D9F /* CNLoginHeaderSectionView.swift in Sources */,
+				CFA9FEB32ABF612E0032555C /* CNOnboardingHomeBackgroundSectionView.swift in Sources */,
+				CF5689B62AD9E61C00501A9A /* CNCustomFonts.swift in Sources */,
+				CF8537CD2ACBAEC2007E42E5 /* CNOnboardingLoginValidateTokenPayload.swift in Sources */,
+				CF4875032AD23F7E0056EE78 /* CNOnboardingLoginRequestErrorView.swift in Sources */,
+				CF5689A42AD9D8D900501A9A /* CNServicesControllerProtocol.swift in Sources */,
+				CF61A7A42AC0A868004B1D9F /* CNOnboardingLoginHeaderSectionView.swift in Sources */,
 				CFA9FEBE2ABF7D190032555C /* UIStackViewExtensions.swift in Sources */,
-				CFEE5A332AD8DD39009E581C /* CNPersistentDataViewController.swift in Sources */,
-				CFA9FEB62ABF642B0032555C /* UIImageExtensions.swift in Sources */,
-				CF53C22B2ABF54F300E6C8A6 /* CNOnboardingViewController.swift in Sources */,
+				CFEE5A332AD8DD39009E581C /* CNUserDefaultsController.swift in Sources */,
+				CFA9FEB62ABF642B0032555C /* CNCustomImages.swift in Sources */,
+				CF53C22B2ABF54F300E6C8A6 /* CNOnboardingHomeViewController.swift in Sources */,
 				CF522CAB2AC3C3D700F984A2 /* EncodableExtensions.swift in Sources */,
 				CF4874FD2AD22A5F0056EE78 /* BottomSheetViewController.swift in Sources */,
+				CF5689A72AD9DB7700501A9A /* CNUserDefaultsCommonsEnum.swift in Sources */,
 				CFA9FEBA2ABF6A510032555C /* UIViewExtensions.swift in Sources */,
-				CF61A7AA2AC0C31E004B1D9F /* CNLoginFooterSectionView.swift in Sources */,
+				CF61A7AA2AC0C31E004B1D9F /* CNOnboardingLoginFooterSectionView.swift in Sources */,
 				CF522C9E2AC3AE8E00F984A2 /* DynamicKeyboardHeightViewController.swift in Sources */,
-				CF53C2322ABF55F900E6C8A6 /* CNOnboardingViewState.swift in Sources */,
-				CF8537D52ACBB908007E42E5 /* CNLoginAccountDetailsResponse.swift in Sources */,
-				CFA9FEC32ABFBA170032555C /* CNOnboardingFooterSectionView.swift in Sources */,
-				CF8537D32ACBB732007E42E5 /* CNLoginCreateSessionResponse.swift in Sources */,
+				CF53C2322ABF55F900E6C8A6 /* CNOnboardingHomeViewState.swift in Sources */,
+				CF8537D52ACBB908007E42E5 /* CNOnboardingLoginAccountDetailsResponse.swift in Sources */,
+				CFA9FEC32ABFBA170032555C /* CNOnboardingHomeFooterSectionView.swift in Sources */,
+				CF8537D32ACBB732007E42E5 /* CNOnboardingLoginCreateSessionResponse.swift in Sources */,
 				CF522CA72AC3C33300F984A2 /* CNNetworkRequestProtocol.swift in Sources */,
-				CF522CAF2AC3C42600F984A2 /* CNLoginRequest.swift in Sources */,
+				CF522CAF2AC3C42600F984A2 /* CNOnboardingLoginRequest.swift in Sources */,
 				CF4875012AD23CFB0056EE78 /* UIViewControllerExtensions.swift in Sources */,
 				CF4874FF2AD22A760056EE78 /* PresentedSheetViewController.swift in Sources */,
-				CF61A79D2AC0A3F5004B1D9F /* CNLoginViewModel.swift in Sources */,
+				CF61A79D2AC0A3F5004B1D9F /* CNOnboardingLoginViewModel.swift in Sources */,
 				CF53C2122ABF4FCF00E6C8A6 /* AppDelegate.swift in Sources */,
-				CF522CB32AC3C50700F984A2 /* CNLoginRequestTokenResponse.swift in Sources */,
+				CF522CB32AC3C50700F984A2 /* CNOnboardingLoginRequestTokenResponse.swift in Sources */,
 				CF522CA52AC3C2D600F984A2 /* CNNetworkControllerProtocol.swift in Sources */,
 				CF53C2142ABF4FCF00E6C8A6 /* SceneDelegate.swift in Sources */,
 			);
@@ -730,7 +870,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -759,7 +901,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

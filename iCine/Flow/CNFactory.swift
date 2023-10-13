@@ -9,17 +9,27 @@ import Foundation
 
 final class CNFactory {
     
+    // MARK: - PROPERTIES
+    
+    private let services: CNServicesControllerProtocol
+    
+    // MARK: - INITIALIZERS
+    
+    init(services: CNServicesControllerProtocol) {
+        self.services = services
+    }
+    
     // MARK: - ONBOARDING
     
-    func makeOnboardingViewController() -> CNOnboardingViewController {
-        let viewModel = CNOnboardingViewModel()
-        let viewController = CNOnboardingViewController(viewModel: viewModel)
+    func makeOnboardingHomeViewController() -> CNOnboardingHomeViewController {
+        let viewModel = CNOnboardingHomeViewModel()
+        let viewController = CNOnboardingHomeViewController(viewModel: viewModel)
         return viewController
     }
     
-    func makeLoginViewController() -> CNLoginViewController {
-        let viewModel = CNLoginViewModel()
-        let viewcontroller = CNLoginViewController(viewModel: viewModel)
+    func makeOnboardingLoginViewController() -> CNOnboardingLoginViewController {
+        let viewModel = CNOnboardingLoginViewModel(services: services)
+        let viewcontroller = CNOnboardingLoginViewController(viewModel: viewModel)
         return viewcontroller
     }
 }

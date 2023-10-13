@@ -7,12 +7,12 @@
 
 import Foundation
 
-extension CNFlowController: CNOnboardingViewControllerDelegate {
+extension CNFlowController: CNOnboardingHomeViewControllerDelegate {
     func goToLoginScene() {
-        let viewController = factory.makeLoginViewController()
+        let viewController = factory.makeOnboardingLoginViewController()
         viewController.delegate = self
         rootNavigation?.pushViewController(viewController, animated: true)
     }
 }
 
-extension CNFlowController: CNLoginViewControllerDelegate { }
+extension CNFlowController: CNOnboardingLoginViewControllerDelegate { }

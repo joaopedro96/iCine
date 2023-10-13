@@ -58,7 +58,7 @@ final class CNTextField: UIView {
         }
     }
     
-    var placeholderFont: UIFont = .systemFont(ofSize: 16, weight: .regular) {
+    var placeholderFont: UIFont = .inter(ofSize: 16, weight: .regular) {
         didSet {
             updatePlaceholder()
         }
