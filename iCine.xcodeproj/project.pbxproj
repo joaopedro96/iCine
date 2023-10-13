@@ -51,6 +51,9 @@
 		CFA9FEC82ABFC3070032555C /* CNFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FEC72ABFC3070032555C /* CNFactory.swift */; };
 		CFA9FECB2ABFC4A60032555C /* CNFlowController+Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9FECA2ABFC4A60032555C /* CNFlowController+Onboarding.swift */; };
 		CFC7288B2ACE4F6B00DAF2B2 /* button_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CFC7288A2ACE4F6B00DAF2B2 /* button_loading.json */; };
+		CFEE5A2E2AD8C8CD009E581C /* CNLoginHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A2D2AD8C8CD009E581C /* CNLoginHelpView.swift */; };
+		CFEE5A312AD8D379009E581C /* CNHyperlinkTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A302AD8D379009E581C /* CNHyperlinkTextView.swift */; };
+		CFEE5A332AD8DD39009E581C /* CNPersistentDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A322AD8DD39009E581C /* CNPersistentDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +105,9 @@
 		CFA9FEC72ABFC3070032555C /* CNFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNFactory.swift; sourceTree = "<group>"; };
 		CFA9FECA2ABFC4A60032555C /* CNFlowController+Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CNFlowController+Onboarding.swift"; sourceTree = "<group>"; };
 		CFC7288A2ACE4F6B00DAF2B2 /* button_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = button_loading.json; sourceTree = "<group>"; };
+		CFEE5A2D2AD8C8CD009E581C /* CNLoginHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNLoginHelpView.swift; sourceTree = "<group>"; };
+		CFEE5A302AD8D379009E581C /* CNHyperlinkTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNHyperlinkTextView.swift; sourceTree = "<group>"; };
+		CFEE5A322AD8DD39009E581C /* CNPersistentDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPersistentDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 		CF522CA02AC3BC1000F984A2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CFEE5A342AD8DD3E009E581C /* PersistentData */,
 				CF522CA12AC3BC2800F984A2 /* Network */,
 			);
 			path = Services;
@@ -306,6 +313,7 @@
 				CF61A7A32AC0A868004B1D9F /* CNLoginHeaderSectionView.swift */,
 				CF61A7A92AC0C31E004B1D9F /* CNLoginFooterSectionView.swift */,
 				CF4875022AD23F7E0056EE78 /* CNLoginRequestErrorView.swift */,
+				CFEE5A2D2AD8C8CD009E581C /* CNLoginHelpView.swift */,
 			);
 			path = ViewSections;
 			sourceTree = "<group>";
@@ -359,6 +367,7 @@
 		CFA9FEBF2ABFB68D0032555C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CFEE5A2F2AD8D25B009E581C /* Hyperlink */,
 				CF4874F42AD226C20056EE78 /* BottomSheet */,
 				CF522C9F2AC3B32600F984A2 /* DynamicKeyboardHeight */,
 				CF61A7A52AC0A8B6004B1D9F /* Button */,
@@ -400,6 +409,22 @@
 				CFC7288A2ACE4F6B00DAF2B2 /* button_loading.json */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		CFEE5A2F2AD8D25B009E581C /* Hyperlink */ = {
+			isa = PBXGroup;
+			children = (
+				CFEE5A302AD8D379009E581C /* CNHyperlinkTextView.swift */,
+			);
+			path = Hyperlink;
+			sourceTree = "<group>";
+		};
+		CFEE5A342AD8DD3E009E581C /* PersistentData */ = {
+			isa = PBXGroup;
+			children = (
+				CFEE5A322AD8DD39009E581C /* CNPersistentDataViewController.swift */,
+			);
+			path = PersistentData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,8 +552,10 @@
 				CF53C22F2ABF554B00E6C8A6 /* CNOnboardingView.swift in Sources */,
 				CFA9FEC82ABFC3070032555C /* CNFactory.swift in Sources */,
 				CFA9FEC12ABFB6F60032555C /* CNButton.swift in Sources */,
+				CFEE5A2E2AD8C8CD009E581C /* CNLoginHelpView.swift in Sources */,
 				CFA9FEBC2ABF781C0032555C /* CNOnboardingBodySectionView.swift in Sources */,
 				CF53C22D2ABF553400E6C8A6 /* CNOnboardingViewModel.swift in Sources */,
+				CFEE5A312AD8D379009E581C /* CNHyperlinkTextView.swift in Sources */,
 				CFA9FECB2ABFC4A60032555C /* CNFlowController+Onboarding.swift in Sources */,
 				CF61A7A12AC0A404004B1D9F /* CNLoginViewState.swift in Sources */,
 				CF522CA92AC3C3AC00F984A2 /* DataExtensions.swift in Sources */,
@@ -537,6 +564,7 @@
 				CF4875032AD23F7E0056EE78 /* CNLoginRequestErrorView.swift in Sources */,
 				CF61A7A42AC0A868004B1D9F /* CNLoginHeaderSectionView.swift in Sources */,
 				CFA9FEBE2ABF7D190032555C /* UIStackViewExtensions.swift in Sources */,
+				CFEE5A332AD8DD39009E581C /* CNPersistentDataViewController.swift in Sources */,
 				CFA9FEB62ABF642B0032555C /* UIImageExtensions.swift in Sources */,
 				CF53C22B2ABF54F300E6C8A6 /* CNOnboardingViewController.swift in Sources */,
 				CF522CAB2AC3C3D700F984A2 /* EncodableExtensions.swift in Sources */,

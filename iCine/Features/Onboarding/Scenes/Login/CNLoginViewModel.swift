@@ -38,8 +38,7 @@ final class CNLoginViewModel {
         getRequestToken(with: credentials)
     }
     
-    func openSafari(for url: String) {
-        guard let url = URL(string: url) else { return }
+    func openSafari(for url: URL) {
         UIApplication.shared.open(url)
     }
     
@@ -52,6 +51,11 @@ final class CNLoginViewModel {
             requestToken: token
         )
         postValidateToken(with: payload)
+    }
+    
+    private func setUserData(_ sessionID: String, _ accountID: Int) {
+        network.setUserDefault(key: "sessionID", value: sessionID)
+        network.setUserDefault(key: "accountID", value: accountID)
     }
     
     // MARK: - FETCH METHODS
@@ -104,8 +108,8 @@ final class CNLoginViewModel {
             
             switch result {
                 case .success(let response):
+                    self?.setUserData(sessionID, response.id)
                     self?.viewState = .hasData
-                    print(response.id)
                     
                 case .failure:
                     self?.viewState = .hasError

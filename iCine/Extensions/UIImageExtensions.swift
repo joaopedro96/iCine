@@ -35,6 +35,10 @@ extension UIImage {
         return initializeSystemIcon(with: "eye.slash.fill")
     }
     
+    class var tmdbLogo: UIImage {
+        return initialize(with: "tmdbLogo")
+    }
+    
     // MARK: - ONBOARDING
     
     class var onboardingPoster: UIImage {

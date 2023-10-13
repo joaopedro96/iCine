@@ -14,6 +14,8 @@ protocol CNNetworkControllerProtocol {
                                completion: @escaping (Result<T, Error>) -> Void)
     func logRequest(with response: AFDataResponse<Data?>, data: Data?, error: Error?)
     func logParseError(for error: Error)
+    func setUserDefault(key: String, value: Any)
+    func getUserDefault(key: String) -> Any?
 }
 
 extension CNNetworkControllerProtocol {

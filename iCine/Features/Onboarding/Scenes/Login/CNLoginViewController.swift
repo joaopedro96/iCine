@@ -34,6 +34,7 @@ final class CNLoginViewController: DynamicKeyboardHeightViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavBar()
         setupController()
     }
     
@@ -48,6 +49,33 @@ final class CNLoginViewController: DynamicKeyboardHeightViewController {
         viewModel.delegate = self
         contentView.delegate = self
         view = contentView
+    }
+    
+    private func setupNavBar() {
+        let helpButton = UIButton()
+        helpButton.setTitle("Help", for: .normal)
+        helpButton.setTitleColor(.txtPrimary, for: .normal)
+        helpButton.titleLabel?.font = .systemFont(ofSize: 12, weight: .regular)
+        helpButton.layer.borderWidth = 1
+        helpButton.layer.cornerRadius = 14
+        helpButton.layer.borderColor = UIColor.bgLight.cgColor
+        helpButton.addTarget(self, action: #selector(didTapHelpButton), for: .touchUpInside)
+        
+        helpButton.snp.makeConstraints { make in
+            make.width.equalTo(56)
+        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: helpButton)
+    }
+    
+    private func dismissBottomSheet() {
+        dismiss(animated: true)
+    }
+    
+    @objc private func didTapHelpButton() {
+        let helpView = CNLoginHelpView()
+        helpView.delegate = self
+        showBottomSheet(with: helpView)
     }
 }
 
@@ -73,6 +101,16 @@ extension CNLoginViewController: CNLoginViewDelegate {
 
 extension CNLoginViewController: CNLoginRequestErrorViewDelegate {
     func didTapButton() {
-        dismiss(animated: true)
+        dismissBottomSheet()
+    }
+}
+
+extension CNLoginViewController: CNLoginHelpViewDelegate {
+    func openSafari(with url: URL) {
+        viewModel.openSafari(for: url)
+    }
+    
+    func didTapUnderstoodButton() {
+        dismissBottomSheet()
     }
 }
