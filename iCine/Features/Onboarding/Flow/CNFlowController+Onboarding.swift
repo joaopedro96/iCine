@@ -15,4 +15,8 @@ extension CNFlowController: CNOnboardingHomeViewControllerDelegate {
     }
 }
 
-extension CNFlowController: CNOnboardingLoginViewControllerDelegate { }
+extension CNFlowController: CNOnboardingLoginViewControllerDelegate {
+    func goToHomeScene() {
+        setupTabBar()
+    }
+}

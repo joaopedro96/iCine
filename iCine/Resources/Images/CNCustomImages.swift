@@ -27,8 +27,20 @@ extension UIImage {
         return initializeSystemIcon(with: "eye.fill")
     }
     
+    class var houseIcon: UIImage {
+        return initialize(with: "houseIcon")
+    }
+    
     class var leftArrowIcon: UIImage {
         return initialize(with: "leftArrow")
+    }
+    
+    class var playerIcon: UIImage {
+        return initialize(with: "playerIcon")
+    }
+    
+    class var searchIcon: UIImage {
+        return initialize(with: "searchIcon")
     }
     
     class var slashedEyeIcon: UIImage {
@@ -37,6 +49,10 @@ extension UIImage {
     
     class var tmdbLogo: UIImage {
         return initialize(with: "tmdbLogo")
+    }
+    
+    class var userIcon: UIImage {
+        return initialize(with: "userIcon")
     }
     
     // MARK: - ONBOARDING

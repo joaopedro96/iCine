@@ -32,4 +32,32 @@ final class CNFactory {
         let viewcontroller = CNOnboardingLoginViewController(viewModel: viewModel)
         return viewcontroller
     }
+    
+    // MARK: - HOME TAB
+    
+    func makeHomeTabMainViewController() -> CNHomeTabMainViewController {
+        let viewcontroller = CNHomeTabMainViewController()
+        return viewcontroller
+    }
+    
+    // MARK: - SEARCH TAB
+    
+    func makeSearchTabMainViewController() -> CNSearchTabMainViewController {
+        let viewcontroller = CNSearchTabMainViewController()
+        return viewcontroller
+    }
+    
+    // MARK: - FAVORITES TAB
+    
+    func makeFavoritesTabMainViewController() -> CNFavoritesTabMainViewController {
+        let viewcontroller = CNFavoritesTabMainViewController()
+        return viewcontroller
+    }
+    
+    // MARK: - ACCOUNT TAB
+    
+    func makeAccountTabMainViewController() -> CNAccountTabMainViewController {
+        let viewcontroller = CNAccountTabMainViewController()
+        return viewcontroller
+    }
 }

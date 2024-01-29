@@ -14,6 +14,7 @@ final class CNFlowController {
     var rootNavigation: UINavigationController?
     let factory: CNFactory
     private let services: CNServicesControllerProtocol
+    private var tabBarNavControllers: [UINavigationController] = []
     
     // MARK: - INITIALIZERS
     
@@ -22,6 +23,16 @@ final class CNFlowController {
         factory = CNFactory(services: services)
         setupRootNavigation()
         customizeNavigationStyle()
+    }
+    
+    // MARK: - PUBLIC METHODS
+    
+    func setupTabBar() {
+        rootNavigation?.viewControllers.removeAll()
+        let tabBar = assembleTabBar()
+        let navigation = UINavigationController(rootViewController: tabBar)
+        navigation.navigationBar.isHidden = true
+        rootNavigation?.pushViewController(tabBar, animated: false)
     }
     
     // MARK: - PRIVATE METHODS
@@ -36,5 +47,16 @@ final class CNFlowController {
         rootNavigation?.navigationBar.backIndicatorImage = .leftArrowIcon
         rootNavigation?.navigationBar.backIndicatorTransitionMaskImage = .leftArrowIcon
         rootNavigation?.navigationBar.topItem?.backButtonTitle = ""
+    }
+    
+    private func assembleTabBar() -> UITabBarController {
+        let tabBar = CNMainTabBarController()
+        addHomeTab(to: tabBar)
+        addSearchTab(to: tabBar)
+        addFavoritesTab(to: tabBar)
+        addAccountTab(to: tabBar)
+        
+        tabBarNavControllers.append(contentsOf: tabBar.navigationControllers)
+        return tabBar
     }
 }

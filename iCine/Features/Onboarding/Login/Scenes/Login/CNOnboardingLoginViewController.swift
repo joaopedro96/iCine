@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol CNOnboardingLoginViewControllerDelegate: AnyObject { }
+protocol CNOnboardingLoginViewControllerDelegate: AnyObject {
+    func goToHomeScene()
+}
 
 final class CNOnboardingLoginViewController: DynamicKeyboardHeightViewController {
     
@@ -82,6 +84,10 @@ final class CNOnboardingLoginViewController: DynamicKeyboardHeightViewController
 // MARK: - EXTENSIONS
 
 extension CNOnboardingLoginViewController: CNOnboardingLoginViewModelDelegate {
+    func goToHomeScene() {
+        delegate?.goToHomeScene()
+    }
+    
     func updateState(with viewState: CNOnboardingLoginViewState) {
         contentView.updateView(with: viewState)
     }

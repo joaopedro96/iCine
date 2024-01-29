@@ -9,6 +9,7 @@ import UIKit
 
 protocol CNOnboardingLoginViewModelDelegate: AnyObject {
     func updateState(with viewState: CNOnboardingLoginViewState)
+    func goToHomeScene()
 }
 
 final class CNOnboardingLoginViewModel {
@@ -22,7 +23,7 @@ final class CNOnboardingLoginViewModel {
             delegate?.updateState(with: viewState)
         }
     }
-
+    
     // MARK: - INITIALIZERS
     
     init(services: CNServicesControllerProtocol) {
@@ -30,7 +31,7 @@ final class CNOnboardingLoginViewModel {
     }
     
     // MARK: - PUBLIC METHODS
-        
+    
     func createUserSession(with credentials: CNOnboardingLoginUserCredentials) {
         viewState = .isLoading
         getRequestToken(with: credentials)
@@ -65,11 +66,11 @@ final class CNOnboardingLoginViewModel {
         ) { [weak self] result in
             
             switch result {
-                case .success(let response):
-                    self?.makeValidateTokenPayload(with: credentials, and: response.requestToken)
-                    
-                case .failure:
-                    self?.viewState = .hasError
+            case .success(let response):
+                self?.makeValidateTokenPayload(with: credentials, and: response.requestToken)
+                
+            case .failure:
+                self?.viewState = .hasError
             }
         }
     }
@@ -81,11 +82,11 @@ final class CNOnboardingLoginViewModel {
         ) { [weak self] result in
             
             switch result {
-                case .success(let response):
-                    self?.postCreateSession(with: response.requestToken)
-                    
-                case .failure:
-                    self?.viewState = .hasError
+            case .success(let response):
+                self?.postCreateSession(with: response.requestToken)
+                
+            case .failure:
+                self?.viewState = .hasError
             }
         }
     }
@@ -97,11 +98,11 @@ final class CNOnboardingLoginViewModel {
         ) { [weak self] result in
             
             switch result {
-                case .success(let response):
-                    self?.getAccountDetails(with: response.sessionID)
-                    
-                case .failure:
-                    self?.viewState = .hasError
+            case .success(let response):
+                self?.getAccountDetails(with: response.sessionID)
+                
+            case .failure:
+                self?.viewState = .hasError
             }
         }
     }
@@ -113,12 +114,13 @@ final class CNOnboardingLoginViewModel {
         ) { [weak self] result in
             
             switch result {
-                case .success(let response):
-                    self?.setUserData(sessionID, response.id)
-                    self?.viewState = .hasData
-                    
-                case .failure:
-                    self?.viewState = .hasError
+            case .success(let response):
+                self?.setUserData(sessionID, response.id)
+                self?.viewState = .hasData
+                self?.delegate?.goToHomeScene()
+                
+            case .failure:
+                self?.viewState = .hasError
             }
         }
     }
