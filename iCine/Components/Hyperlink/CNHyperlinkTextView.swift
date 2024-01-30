@@ -79,7 +79,7 @@ final class CNHyperlinkTextView: UITextView {
 // MARK: - EXTENSIONS
 
 extension CNHyperlinkTextView: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
         hyperlinkDelegate?.triggerLink(for: URL, atRange: characterRange)
         return false
     }
