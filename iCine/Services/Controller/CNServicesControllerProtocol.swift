@@ -10,4 +10,5 @@ import Foundation
 protocol CNServicesControllerProtocol {
     var network: CNNetworkControllerProtocol { get }
     var userDefaults: CNUserDefaultsControllerProtocol { get }
+    var keyChain: CNKeyChainControllerProtocol { get }
 }

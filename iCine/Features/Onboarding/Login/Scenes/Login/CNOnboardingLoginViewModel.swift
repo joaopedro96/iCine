@@ -52,9 +52,13 @@ final class CNOnboardingLoginViewModel {
         postValidateToken(with: payload)
     }
     
+    // TODO: - Delete one persitent data below
     private func setUserData(_ sessionID: String, _ accountID: Int) {
         services.userDefaults.set(userDefaults: CNUserDefaultsCommonsEnum.sessionID, value: sessionID)
         services.userDefaults.set(userDefaults: CNUserDefaultsCommonsEnum.accountID, value: accountID)
+        
+        services.keyChain.set(keyChain: CNKeyChainCommonsEnum.sessionID, with: sessionID)
+        services.keyChain.set(keyChain: CNKeyChainCommonsEnum.accountID, with: accountID.asString())
     }
     
     // MARK: - FETCH METHODS

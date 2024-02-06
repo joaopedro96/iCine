@@ -75,6 +75,10 @@
 		CFEE5A2E2AD8C8CD009E581C /* CNOnboardingLoginHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A2D2AD8C8CD009E581C /* CNOnboardingLoginHelpView.swift */; };
 		CFEE5A312AD8D379009E581C /* CNHyperlinkTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A302AD8D379009E581C /* CNHyperlinkTextView.swift */; };
 		CFEE5A332AD8DD39009E581C /* CNUserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE5A322AD8DD39009E581C /* CNUserDefaultsController.swift */; };
+		CFFAE4932B6B13BF008DC2E6 /* CNKeyChainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAE4922B6B13BF008DC2E6 /* CNKeyChainController.swift */; };
+		CFFAE4952B71B763008DC2E6 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAE4942B71B763008DC2E6 /* IntExtensions.swift */; };
+		CFFAE4972B71CF61008DC2E6 /* CNKeyChainCommonsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAE4962B71CF61008DC2E6 /* CNKeyChainCommonsEnum.swift */; };
+		CFFAE4992B71CFAA008DC2E6 /* CNKeyChainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAE4982B71CFAA008DC2E6 /* CNKeyChainProtocol.swift */; };
 		CFFE56A32B685805006CF000 /* CNMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE56A22B685805006CF000 /* CNMainTabBarController.swift */; };
 		CFFE56AD2B685BF6006CF000 /* CNHomeTabFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE56AC2B685BF6006CF000 /* CNHomeTabFlowController.swift */; };
 		CFFE56AF2B685C00006CF000 /* CNSearchTabFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE56AE2B685C00006CF000 /* CNSearchTabFlowController.swift */; };
@@ -159,6 +163,10 @@
 		CFEE5A2D2AD8C8CD009E581C /* CNOnboardingLoginHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNOnboardingLoginHelpView.swift; sourceTree = "<group>"; };
 		CFEE5A302AD8D379009E581C /* CNHyperlinkTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNHyperlinkTextView.swift; sourceTree = "<group>"; };
 		CFEE5A322AD8DD39009E581C /* CNUserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNUserDefaultsController.swift; sourceTree = "<group>"; };
+		CFFAE4922B6B13BF008DC2E6 /* CNKeyChainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNKeyChainController.swift; sourceTree = "<group>"; };
+		CFFAE4942B71B763008DC2E6 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		CFFAE4962B71CF61008DC2E6 /* CNKeyChainCommonsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNKeyChainCommonsEnum.swift; sourceTree = "<group>"; };
+		CFFAE4982B71CFAA008DC2E6 /* CNKeyChainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNKeyChainProtocol.swift; sourceTree = "<group>"; };
 		CFFE56A22B685805006CF000 /* CNMainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNMainTabBarController.swift; sourceTree = "<group>"; };
 		CFFE56AC2B685BF6006CF000 /* CNHomeTabFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNHomeTabFlowController.swift; sourceTree = "<group>"; };
 		CFFE56AE2B685C00006CF000 /* CNSearchTabFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNSearchTabFlowController.swift; sourceTree = "<group>"; };
@@ -220,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				CF5689A22AD9D8B300501A9A /* Controller */,
+				CFFAE4912B6B1354008DC2E6 /* KeyChain */,
 				CFEE5A342AD8DD3E009E581C /* UserDefaults */,
 				CF522CA12AC3BC2800F984A2 /* Network */,
 			);
@@ -523,6 +532,7 @@
 				CF522CA82AC3C3AC00F984A2 /* DataExtensions.swift */,
 				CF522CAA2AC3C3D700F984A2 /* EncodableExtensions.swift */,
 				CF4875002AD23CFB0056EE78 /* UIViewControllerExtensions.swift */,
+				CFFAE4942B71B763008DC2E6 /* IntExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -594,6 +604,16 @@
 				CF5689A62AD9DB7700501A9A /* CNUserDefaultsCommonsEnum.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		CFFAE4912B6B1354008DC2E6 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				CFFAE4922B6B13BF008DC2E6 /* CNKeyChainController.swift */,
+				CFFAE4962B71CF61008DC2E6 /* CNKeyChainCommonsEnum.swift */,
+				CFFAE4982B71CFAA008DC2E6 /* CNKeyChainProtocol.swift */,
+			);
+			path = KeyChain;
 			sourceTree = "<group>";
 		};
 		CFFE56A12B6857EE006CF000 /* MainTabBar */ = {
@@ -960,12 +980,14 @@
 				CF5689A12AD9D84100501A9A /* CNUserDefaultsProtocol.swift in Sources */,
 				CF56899F2AD9D67F00501A9A /* CNServicesController.swift in Sources */,
 				CFFE56C82B68674F006CF000 /* CNFavoritesTabMainViewController.swift in Sources */,
+				CFFAE4952B71B763008DC2E6 /* IntExtensions.swift in Sources */,
 				CFEE5A2E2AD8C8CD009E581C /* CNOnboardingLoginHelpView.swift in Sources */,
 				CFA9FEBC2ABF781C0032555C /* CNOnboardingHomeBodySectionView.swift in Sources */,
 				CF53C22D2ABF553400E6C8A6 /* CNOnboardingHomeViewModel.swift in Sources */,
 				CFEE5A312AD8D379009E581C /* CNHyperlinkTextView.swift in Sources */,
 				CFA9FECB2ABFC4A60032555C /* CNOnboardingFlowController.swift in Sources */,
 				CF61A7A12AC0A404004B1D9F /* CNOnboardingLoginViewState.swift in Sources */,
+				CFFAE4992B71CFAA008DC2E6 /* CNKeyChainProtocol.swift in Sources */,
 				CF5689B82AD9E8D900501A9A /* CNFontWeightEnum.swift in Sources */,
 				CF522CA92AC3C3AC00F984A2 /* DataExtensions.swift in Sources */,
 				CFA9FEB32ABF612E0032555C /* CNOnboardingHomeBackgroundSectionView.swift in Sources */,
@@ -994,12 +1016,14 @@
 				CF53C2322ABF55F900E6C8A6 /* CNOnboardingHomeViewState.swift in Sources */,
 				CFFE56AD2B685BF6006CF000 /* CNHomeTabFlowController.swift in Sources */,
 				CF8537D52ACBB908007E42E5 /* CNOnboardingLoginAccountDetailsResponse.swift in Sources */,
+				CFFAE4972B71CF61008DC2E6 /* CNKeyChainCommonsEnum.swift in Sources */,
 				CFA9FEC32ABFBA170032555C /* CNOnboardingHomeFooterSectionView.swift in Sources */,
 				CF8537D32ACBB732007E42E5 /* CNOnboardingLoginCreateSessionResponse.swift in Sources */,
 				CF522CA72AC3C33300F984A2 /* CNNetworkRequestProtocol.swift in Sources */,
 				CF522CAF2AC3C42600F984A2 /* CNOnboardingLoginRequest.swift in Sources */,
 				CF4875012AD23CFB0056EE78 /* UIViewControllerExtensions.swift in Sources */,
 				CFFE56B32B685C13006CF000 /* CNAccountTabFlowController.swift in Sources */,
+				CFFAE4932B6B13BF008DC2E6 /* CNKeyChainController.swift in Sources */,
 				CF4874FF2AD22A760056EE78 /* PresentedSheetViewController.swift in Sources */,
 				CFFE56AF2B685C00006CF000 /* CNSearchTabFlowController.swift in Sources */,
 				CF61A79D2AC0A3F5004B1D9F /* CNOnboardingLoginViewModel.swift in Sources */,

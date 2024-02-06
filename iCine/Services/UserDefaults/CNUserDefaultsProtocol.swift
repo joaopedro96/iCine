@@ -7,11 +7,11 @@
 
 import Foundation
 
+protocol CNUserDefaultsProtocol {
+    var key: String { get }
+}
+
 protocol CNUserDefaultsControllerProtocol {
     func set(userDefaults: CNUserDefaultsProtocol, value: Any)
     func get(userDefaults: CNUserDefaultsProtocol) -> Any?
-}
-
-protocol CNUserDefaultsProtocol {
-    var key: String { get }
 }

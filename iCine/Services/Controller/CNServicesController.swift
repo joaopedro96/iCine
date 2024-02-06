@@ -13,12 +13,15 @@ final class CNServicesController: CNServicesControllerProtocol {
     
     let network: CNNetworkControllerProtocol
     let userDefaults: CNUserDefaultsControllerProtocol
+    let keyChain: CNKeyChainControllerProtocol
     
     // MARK: - INITIALIZERS
     
     init(network: CNNetworkControllerProtocol = CNNetworkController(),
-         userDefaults: CNUserDefaultsControllerProtocol = CNUserDefaultsController()) {
+         userDefaults: CNUserDefaultsControllerProtocol = CNUserDefaultsController(),
+         keyChain: CNKeyChainControllerProtocol = CNKeyChainController()) {
         self.network = network
         self.userDefaults = userDefaults
+        self.keyChain = keyChain
     }
 }
