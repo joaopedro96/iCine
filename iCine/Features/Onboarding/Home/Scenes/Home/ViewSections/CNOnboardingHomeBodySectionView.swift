@@ -31,16 +31,17 @@ final class CNOnboardingHomeBodySectionView: UIView {
     
     private lazy var titleLabel: UILabel = {
         let setupComponent = UILabel()
-        setupComponent.text = "Welcome to iCine"
+        setupComponent.text = "home_welcome_title".onboardingLocalized()
         setupComponent.font = .inter(ofSize: 36, weight: .regular)
         setupComponent.textColor = .txtPrimary
         setupComponent.textAlignment = .center
+        setupComponent.numberOfLines = 0
         return setupComponent
     }()
     
     private lazy var descriptionLabel: UILabel = {
         let setupComponent = UILabel()
-        setupComponent.text = "Millions of movies, TV shows and people to discover. Explore now."
+        setupComponent.text = "home_welcome_description".onboardingLocalized()
         setupComponent.font = .inter(ofSize: 16, weight: .regular)
         setupComponent.textColor = .txtPrimary
         setupComponent.textAlignment = .center

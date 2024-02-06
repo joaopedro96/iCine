@@ -34,7 +34,7 @@ final class CNOnboardingLoginFooterSectionView: UIView {
     private lazy var continueButton: CNButton = {
         let setupComponent = CNButton()
         setupComponent.isEnabled = false
-        setupComponent.setTitle("Continue", for: .normal)
+        setupComponent.setTitle("common_continue_text".onboardingLocalized(), for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapContinueButton), for: .touchUpInside)
         return setupComponent
     }()

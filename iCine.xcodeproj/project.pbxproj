@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F646EC2DE66DD8A424B07F8 /* Pods_iCine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F4C753AB79AA6E622D0ADB /* Pods_iCine.framework */; };
+		CF46E24F2B72EE8400E50FE8 /* OnboardingLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF46E24E2B72EE8400E50FE8 /* OnboardingLocalizable.swift */; };
+		CF46E2532B72F12A00E50FE8 /* OnboardingLocalizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CF46E2522B72F12A00E50FE8 /* OnboardingLocalizable.xcstrings */; };
 		CF4874FD2AD22A5F0056EE78 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4874FC2AD22A5F0056EE78 /* BottomSheetViewController.swift */; };
 		CF4874FF2AD22A760056EE78 /* PresentedSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4874FE2AD22A760056EE78 /* PresentedSheetViewController.swift */; };
 		CF4875012AD23CFB0056EE78 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4875002AD23CFB0056EE78 /* UIViewControllerExtensions.swift */; };
@@ -94,6 +96,8 @@
 		1A5DF45C673D05867534DCAA /* Pods-iCine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCine.debug.xcconfig"; path = "Target Support Files/Pods-iCine/Pods-iCine.debug.xcconfig"; sourceTree = "<group>"; };
 		43F4C753AB79AA6E622D0ADB /* Pods_iCine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD8E4C772CAA4B8EF6EADC1 /* Pods-iCine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCine.release.xcconfig"; path = "Target Support Files/Pods-iCine/Pods-iCine.release.xcconfig"; sourceTree = "<group>"; };
+		CF46E24E2B72EE8400E50FE8 /* OnboardingLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLocalizable.swift; sourceTree = "<group>"; };
+		CF46E2522B72F12A00E50FE8 /* OnboardingLocalizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = OnboardingLocalizable.xcstrings; sourceTree = "<group>"; };
 		CF4874FC2AD22A5F0056EE78 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		CF4874FE2AD22A760056EE78 /* PresentedSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedSheetViewController.swift; sourceTree = "<group>"; };
 		CF4875002AD23CFB0056EE78 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -207,6 +211,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF46E24D2B72EE7100E50FE8 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				CF46E24E2B72EE8400E50FE8 /* OnboardingLocalizable.swift */,
+				CF46E2522B72F12A00E50FE8 /* OnboardingLocalizable.xcstrings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
 		CF4874F42AD226C20056EE78 /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +307,7 @@
 		CF53C2262ABF540900E6C8A6 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				CF46E24D2B72EE7100E50FE8 /* Localizables */,
 				CFA9FEC92ABFC4950032555C /* Flow */,
 				CF5689922AD9CEBB00501A9A /* Home */,
 				CF5689932AD9CEC100501A9A /* Login */,
@@ -885,6 +899,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = CF53C2052ABF4FCF00E6C8A6;
 			productRefGroup = CF53C20F2ABF4FCF00E6C8A6 /* Products */;
@@ -909,6 +924,7 @@
 				CF5689C62AD9EAF600501A9A /* Inter-Medium.ttf in Resources */,
 				CF5689C82AD9EAF600501A9A /* Inter-Bold.ttf in Resources */,
 				CFC7288B2ACE4F6B00DAF2B2 /* button_loading.json in Resources */,
+				CF46E2532B72F12A00E50FE8 /* OnboardingLocalizable.xcstrings in Resources */,
 				CF5689C92AD9EAF600501A9A /* Inter-ExtraLight.ttf in Resources */,
 				CF5689C42AD9EAF600501A9A /* Inter-ExtraBold.ttf in Resources */,
 				CF5689CA2AD9EAF600501A9A /* Inter-Light.ttf in Resources */,
@@ -974,6 +990,7 @@
 				CF61A79B2AC0A359004B1D9F /* CNOnboardingLoginViewController.swift in Sources */,
 				CFFE56B12B685C0A006CF000 /* CNFavoritesTabFlowController.swift in Sources */,
 				CFA9FEC62ABFC2510032555C /* CNMainFlowController.swift in Sources */,
+				CF46E24F2B72EE8400E50FE8 /* OnboardingLocalizable.swift in Sources */,
 				CF53C22F2ABF554B00E6C8A6 /* CNOnboardingHomeView.swift in Sources */,
 				CFFE56A32B685805006CF000 /* CNMainTabBarController.swift in Sources */,
 				CFA9FEC12ABFB6F60032555C /* CNButton.swift in Sources */,

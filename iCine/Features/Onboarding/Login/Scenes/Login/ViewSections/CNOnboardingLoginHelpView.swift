@@ -40,17 +40,17 @@ final class CNOnboardingLoginHelpView: UIView {
     
     private lazy var descriptionLabel: CNHyperlinkTextView = {
         let setupComponent = CNHyperlinkTextView()
-        setupComponent.text = "iCine was developed based on the API data provided by The Movie Database (TMDB).\n\nTo access iCine app its necessary to sign in with your TMDB credentials. If you don't have an active account you can sign up on TMDB official website."
+        setupComponent.text = "login_help_description_text".onboardingLocalized()
         setupComponent.font = .inter(ofSize: 16, weight: .regular)
         setupComponent.textColor = .txtPrimary
-        setupComponent.setHyperlinks(["TMDB official website.": "https://www.themoviedb.org"])
+        setupComponent.setHyperlinks(["login_highlight_tmdb_site".onboardingLocalized(): "https://www.themoviedb.org"])
         setupComponent.hyperlinkDelegate = self
         return setupComponent
     }()
     
     private lazy var warningLabel: UILabel = {
         let setupComponent = UILabel()
-        setupComponent.text = "This product uses the TMDB API but is not endorsed or certified by TMDB."
+        setupComponent.text = "login_help_ownership_warning".onboardingLocalized()
         setupComponent.font = .inter(ofSize: 16, weight: .bold)
         setupComponent.textColor = .txtPrimary
         setupComponent.textAlignment = .center
@@ -60,7 +60,7 @@ final class CNOnboardingLoginHelpView: UIView {
         
     private lazy var understoodButton: CNButton = {
         let setupComponent = CNButton(buttonType: .secondary)
-        setupComponent.setTitle("Understood", for: .normal)
+        setupComponent.setTitle("common_understood_text".onboardingLocalized(), for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapUnderstoodButton), for: .touchUpInside)
         return setupComponent
     }()

@@ -39,7 +39,7 @@ final class CNOnboardingLoginRequestErrorView: UIView {
     
     private lazy var titleLabel: UILabel = {
         let setupComponent = UILabel()
-        setupComponent.text = "Something went wrong"
+        setupComponent.text = "common_wrong_flow_text".onboardingLocalized()
         setupComponent.font = .inter(ofSize: 16, weight: .bold)
         setupComponent.textColor = .txtPrimary
         setupComponent.textAlignment = .center
@@ -48,7 +48,7 @@ final class CNOnboardingLoginRequestErrorView: UIView {
     
     private lazy var descriptionLabel: UILabel = {
         let setupComponent = UILabel()
-        setupComponent.text = "An error occurred when trying to sign in. Please check your TMDB credentials and try again."
+        setupComponent.text = "login_error_description".onboardingLocalized()
         setupComponent.font = .inter(ofSize: 16, weight: .regular)
         setupComponent.numberOfLines = 0
         setupComponent.textColor = .txtPrimary
@@ -57,7 +57,7 @@ final class CNOnboardingLoginRequestErrorView: UIView {
         
     private lazy var okButton: CNButton = {
         let setupComponent = CNButton(buttonType: .secondary)
-        setupComponent.setTitle("Ok", for: .normal)
+        setupComponent.setTitle("common_ok_text".onboardingLocalized(), for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         return setupComponent
     }()

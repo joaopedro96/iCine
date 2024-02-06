@@ -46,7 +46,7 @@ final class CNOnboardingLoginHeaderSectionView: UIView {
     
     private lazy var userTextField: CNTextField = {
         let setupComponent = CNTextField()
-        setupComponent.placeholderText = "Enter your TMDB email"
+        setupComponent.placeholderText = "login_account_placeholder".onboardingLocalized()
         setupComponent.autoCapitalizationType = .none
         setupComponent.autoCorrectionType = .no
         setupComponent.delegate = self
@@ -55,7 +55,7 @@ final class CNOnboardingLoginHeaderSectionView: UIView {
     
     private lazy var passwordTextField: CNTextField = {
         let setupComponent = CNTextField()
-        setupComponent.placeholderText = "Enter your TMDB password"
+        setupComponent.placeholderText = "login_password_placeholder".onboardingLocalized()
         setupComponent.isSecureTextEntry = true
         setupComponent.delegate = self
         return setupComponent

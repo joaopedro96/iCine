@@ -40,7 +40,7 @@ final class CNOnboardingHomeFooterSectionView: UIView {
     
     private lazy var signInButton: CNButton = {
         let setupComponent = CNButton()
-        setupComponent.setTitle("Sign in", for: .normal)
+        setupComponent.setTitle("common_sign_in_text".onboardingLocalized(), for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
         return setupComponent
     }()
@@ -48,7 +48,7 @@ final class CNOnboardingHomeFooterSectionView: UIView {
     private lazy var signUpButton: CNButton = {
         let setupComponent = CNButton()
         setupComponent.type = .secondary
-        setupComponent.setTitle("Sign up", for: .normal)
+        setupComponent.setTitle("common_sign_up_text".onboardingLocalized(), for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         return setupComponent
     }()
