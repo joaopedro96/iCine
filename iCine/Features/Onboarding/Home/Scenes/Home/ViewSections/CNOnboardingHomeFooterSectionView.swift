@@ -14,6 +14,11 @@ protocol CNOnboardingHomeFooterSectionViewDelegate: AnyObject {
 
 final class CNOnboardingHomeFooterSectionView: UIView {
     
+    // MARK: - CONSTANTS
+    
+    private let signInText = "common_sign_in_text".onboardingLocalized()
+    private let signUpText = "common_sign_up_text".onboardingLocalized()
+    
     // MARK: - PROPERTIES
     
     weak var delegate: CNOnboardingHomeFooterSectionViewDelegate?
@@ -40,7 +45,7 @@ final class CNOnboardingHomeFooterSectionView: UIView {
     
     private lazy var signInButton: CNButton = {
         let setupComponent = CNButton()
-        setupComponent.setTitle("common_sign_in_text".onboardingLocalized(), for: .normal)
+        setupComponent.setTitle(signInText, for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
         return setupComponent
     }()
@@ -48,7 +53,7 @@ final class CNOnboardingHomeFooterSectionView: UIView {
     private lazy var signUpButton: CNButton = {
         let setupComponent = CNButton()
         setupComponent.type = .secondary
-        setupComponent.setTitle("common_sign_up_text".onboardingLocalized(), for: .normal)
+        setupComponent.setTitle(signUpText, for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         return setupComponent
     }()

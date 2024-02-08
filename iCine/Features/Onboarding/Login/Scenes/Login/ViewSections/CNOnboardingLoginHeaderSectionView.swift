@@ -13,6 +13,11 @@ protocol CNOnboardingLoginHeaderSectionViewDelegate: AnyObject {
 
 final class CNOnboardingLoginHeaderSectionView: UIView {
     
+    // MARK: - CONSTANTS
+    
+    private let accountPlaceholder = "login_account_placeholder".onboardingLocalized()
+    private let passwordPlaceholder = "login_password_placeholder".onboardingLocalized()
+    
     // MARK: - PROPERTIES
     
     weak var delegate: CNOnboardingLoginHeaderSectionViewDelegate?
@@ -46,7 +51,7 @@ final class CNOnboardingLoginHeaderSectionView: UIView {
     
     private lazy var userTextField: CNTextField = {
         let setupComponent = CNTextField()
-        setupComponent.placeholderText = "login_account_placeholder".onboardingLocalized()
+        setupComponent.placeholderText = accountPlaceholder
         setupComponent.autoCapitalizationType = .none
         setupComponent.autoCorrectionType = .no
         setupComponent.delegate = self
@@ -55,7 +60,7 @@ final class CNOnboardingLoginHeaderSectionView: UIView {
     
     private lazy var passwordTextField: CNTextField = {
         let setupComponent = CNTextField()
-        setupComponent.placeholderText = "login_password_placeholder".onboardingLocalized()
+        setupComponent.placeholderText = passwordPlaceholder
         setupComponent.isSecureTextEntry = true
         setupComponent.delegate = self
         return setupComponent

@@ -13,6 +13,10 @@ protocol CNOnboardingLoginFooterSectionViewDelegate: AnyObject {
 
 final class CNOnboardingLoginFooterSectionView: UIView {
     
+    // MARK: - CONSTANTS
+    
+    private let continueText = "common_continue_text".onboardingLocalized()
+    
     // MARK: - PROPERTIES
     
     weak var delegate: CNOnboardingLoginFooterSectionViewDelegate?
@@ -34,7 +38,7 @@ final class CNOnboardingLoginFooterSectionView: UIView {
     private lazy var continueButton: CNButton = {
         let setupComponent = CNButton()
         setupComponent.isEnabled = false
-        setupComponent.setTitle("common_continue_text".onboardingLocalized(), for: .normal)
+        setupComponent.setTitle(continueText, for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapContinueButton), for: .touchUpInside)
         return setupComponent
     }()

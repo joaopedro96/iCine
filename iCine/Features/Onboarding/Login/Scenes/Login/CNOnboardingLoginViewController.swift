@@ -13,6 +13,10 @@ protocol CNOnboardingLoginViewControllerDelegate: AnyObject {
 
 final class CNOnboardingLoginViewController: DynamicKeyboardHeightViewController {
     
+    // MARK: - CONSTANTS
+    
+    private let helpText = "common_help_text".onboardingLocalized()
+    
     // MARK: - PROPERTIES
     
     weak var delegate: CNOnboardingLoginViewControllerDelegate?
@@ -55,7 +59,7 @@ final class CNOnboardingLoginViewController: DynamicKeyboardHeightViewController
     
     private func setupNavBar() {
         let helpButton = UIButton()
-        helpButton.setTitle("common_help_text".onboardingLocalized(), for: .normal)
+        helpButton.setTitle(helpText, for: .normal)
         helpButton.setTitleColor(.txtPrimary, for: .normal)
         helpButton.titleLabel?.font = .inter(ofSize: 12, weight: .regular)
         helpButton.layer.borderWidth = 1

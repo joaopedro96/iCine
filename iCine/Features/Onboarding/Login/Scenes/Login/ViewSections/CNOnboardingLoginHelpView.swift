@@ -14,6 +14,13 @@ protocol CNOnboardingLoginHelpViewDelegate: AnyObject {
 
 final class CNOnboardingLoginHelpView: UIView {
     
+    // MARK: - CONSTANTS
+    
+    private let helpDescription = "login_help_description_text".onboardingLocalized()
+    private let highlightDescription = "login_highlight_tmdb_site".onboardingLocalized()
+    private let ownershipWarning = "login_help_ownership_warning".onboardingLocalized()
+    private let understoodText = "common_understood_text".onboardingLocalized()
+    
     // MARK: - PROPERTIES
     
     weak var delegate: CNOnboardingLoginHelpViewDelegate?
@@ -40,17 +47,17 @@ final class CNOnboardingLoginHelpView: UIView {
     
     private lazy var descriptionLabel: CNHyperlinkTextView = {
         let setupComponent = CNHyperlinkTextView()
-        setupComponent.text = "login_help_description_text".onboardingLocalized()
+        setupComponent.text = helpDescription
         setupComponent.font = .inter(ofSize: 16, weight: .regular)
         setupComponent.textColor = .txtPrimary
-        setupComponent.setHyperlinks(["login_highlight_tmdb_site".onboardingLocalized(): "https://www.themoviedb.org"])
+        setupComponent.setHyperlinks([highlightDescription: "https://www.themoviedb.org"])
         setupComponent.hyperlinkDelegate = self
         return setupComponent
     }()
     
     private lazy var warningLabel: UILabel = {
         let setupComponent = UILabel()
-        setupComponent.text = "login_help_ownership_warning".onboardingLocalized()
+        setupComponent.text = ownershipWarning
         setupComponent.font = .inter(ofSize: 16, weight: .bold)
         setupComponent.textColor = .txtPrimary
         setupComponent.textAlignment = .center
@@ -60,7 +67,7 @@ final class CNOnboardingLoginHelpView: UIView {
         
     private lazy var understoodButton: CNButton = {
         let setupComponent = CNButton(buttonType: .secondary)
-        setupComponent.setTitle("common_understood_text".onboardingLocalized(), for: .normal)
+        setupComponent.setTitle(understoodText, for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapUnderstoodButton), for: .touchUpInside)
         return setupComponent
     }()

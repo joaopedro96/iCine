@@ -13,6 +13,12 @@ protocol CNOnboardingLoginRequestErrorViewDelegate: AnyObject {
 
 final class CNOnboardingLoginRequestErrorView: UIView {
     
+    // MARK: - CONSTANTS
+    
+    private let errorTitle = "common_wrong_flow_text".onboardingLocalized()
+    private let errorDescription = "login_error_description".onboardingLocalized()
+    private let okText = "common_ok_text".onboardingLocalized()
+    
     // MARK: - PROPERTIES
     
     weak var delegate: CNOnboardingLoginRequestErrorViewDelegate?
@@ -39,7 +45,7 @@ final class CNOnboardingLoginRequestErrorView: UIView {
     
     private lazy var titleLabel: UILabel = {
         let setupComponent = UILabel()
-        setupComponent.text = "common_wrong_flow_text".onboardingLocalized()
+        setupComponent.text = errorTitle
         setupComponent.font = .inter(ofSize: 16, weight: .bold)
         setupComponent.textColor = .txtPrimary
         setupComponent.textAlignment = .center
@@ -48,7 +54,7 @@ final class CNOnboardingLoginRequestErrorView: UIView {
     
     private lazy var descriptionLabel: UILabel = {
         let setupComponent = UILabel()
-        setupComponent.text = "login_error_description".onboardingLocalized()
+        setupComponent.text = errorDescription
         setupComponent.font = .inter(ofSize: 16, weight: .regular)
         setupComponent.numberOfLines = 0
         setupComponent.textColor = .txtPrimary
@@ -57,7 +63,7 @@ final class CNOnboardingLoginRequestErrorView: UIView {
         
     private lazy var okButton: CNButton = {
         let setupComponent = CNButton(buttonType: .secondary)
-        setupComponent.setTitle("common_ok_text".onboardingLocalized(), for: .normal)
+        setupComponent.setTitle(okText, for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         return setupComponent
     }()
