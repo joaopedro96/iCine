@@ -8,32 +8,32 @@
 import UIKit
 
 final class CNOnboardingHomeBodySectionView: UIView {
-    
+
     // MARK: - CONSTANTS
-    
+
     private let welcomeTitle = "home_welcome_title".onboardingLocalized()
     private let welcomeDescription = "home_welcome_description".onboardingLocalized()
-    
+
     // MARK: - INITIALIZERS
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - UI
-    
+
     private lazy var appIcon: UIImageView = {
         let setupComponent = UIImageView()
         setupComponent.contentMode = .scaleAspectFill
         setupComponent.image = .appIcon
         return setupComponent
     }()
-    
+
     private lazy var titleLabel: UILabel = {
         let setupComponent = UILabel()
         setupComponent.text = welcomeTitle
@@ -43,7 +43,7 @@ final class CNOnboardingHomeBodySectionView: UIView {
         setupComponent.numberOfLines = 0
         return setupComponent
     }()
-    
+
     private lazy var descriptionLabel: UILabel = {
         let setupComponent = UILabel()
         setupComponent.text = welcomeDescription
@@ -53,14 +53,14 @@ final class CNOnboardingHomeBodySectionView: UIView {
         setupComponent.numberOfLines = 0
         return setupComponent
     }()
-    
+
     // MARK: - SETUP VIEW
-    
+
     private func setupView() {
         buildViewHierarchy()
         setupConstraints()
     }
-    
+
     private func buildViewHierarchy() {
         addSubviews(
             appIcon,
@@ -68,20 +68,20 @@ final class CNOnboardingHomeBodySectionView: UIView {
             descriptionLabel
         )
     }
-    
+
     private func setupConstraints() {
         appIcon.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.centerX.equalToSuperview()
             make.size.equalTo(170)
         }
-        
+
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(appIcon.snp.bottom).offset(16)
             make.leading.equalToSuperview().offset(40)
             make.trailing.equalToSuperview().inset(40)
         }
-        
+
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(16)

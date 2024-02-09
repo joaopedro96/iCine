@@ -8,15 +8,15 @@
 import Foundation
 
 final class CNServicesController: CNServicesControllerProtocol {
-    
+
     // MARK: - PROPERTIES
-    
+
     let network: CNNetworkControllerProtocol
     let userDefaults: CNUserDefaultsControllerProtocol
     let keyChain: CNKeyChainControllerProtocol
-    
+
     // MARK: - INITIALIZERS
-    
+
     init(network: CNNetworkControllerProtocol = CNNetworkController(),
          userDefaults: CNUserDefaultsControllerProtocol = CNUserDefaultsController(),
          keyChain: CNKeyChainControllerProtocol = CNKeyChainController()) {

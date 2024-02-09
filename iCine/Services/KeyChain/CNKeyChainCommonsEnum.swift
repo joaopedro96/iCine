@@ -10,7 +10,7 @@ import Foundation
 enum CNKeyChainCommonsEnum: CNKeyChainProtocol {
     case accountID
     case sessionID
-    
+
     var accountID: String {
         switch self {
         case .accountID:
@@ -19,7 +19,7 @@ enum CNKeyChainCommonsEnum: CNKeyChainProtocol {
             "tmdb-token"
         }
     }
-    
+
     var serviceID: String {
         switch self {
         case .accountID:

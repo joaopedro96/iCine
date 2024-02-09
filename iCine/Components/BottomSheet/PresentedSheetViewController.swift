@@ -8,27 +8,27 @@
 import UIKit
 
 class PresentedSheetViewController: UIViewController {
-    
+
     // MARK: - PROPERTIES
-    
+
     private let sheet: UIView
     private let showIndicatorView: Bool
-    
+
     // MARK: - INITIALIZERS
-    
+
     init(sheet: UIView, showIndicator: Bool = true) {
         self.sheet = sheet
         self.showIndicatorView = showIndicator
         super.init(nibName: nil, bundle: nil)
         setupView()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - UI
-    
+
     private lazy var containerView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -36,7 +36,7 @@ class PresentedSheetViewController: UIViewController {
         stackView.alignment = .fill
         return stackView
     }()
-    
+
     private lazy var containerIndicatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +52,7 @@ class PresentedSheetViewController: UIViewController {
     }()
 
     // MARK: - SETUP VIEW
-    
+
     private func setupView() {
         buildViewHierarchy()
         setupConstraints()
@@ -72,7 +72,7 @@ class PresentedSheetViewController: UIViewController {
             containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            
+
             containerIndicatorView.heightAnchor.constraint(equalToConstant: 4),
 
             indicatorView.heightAnchor.constraint(equalToConstant: 4),

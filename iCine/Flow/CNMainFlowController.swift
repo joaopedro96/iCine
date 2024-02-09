@@ -8,9 +8,9 @@
 import UIKit
 
 final class CNMainFlowController {
-    
+
     // MARK: - PROPERTIES
-    
+
     var mainRootNavigation: UINavigationController?
     private let services: CNServicesControllerProtocol = CNServicesController()
     private var onboardingFlow: CNOnboardingFlowController?
@@ -19,46 +19,46 @@ final class CNMainFlowController {
     private var searchTabFlow: CNSearchTabFlowController?
     private var favoritesTabFlow: CNFavoritesTabFlowController?
     private var accountTabFlow: CNAccountTabFlowController?
-    
+
     // MARK: - PUBLIC METHODS
-    
+
     func start() {
         assembleOnboardingFlowController()
         startOnboardingFlow()
         customizeNavigationStyle()
     }
-    
+
     // MARK: - PRIVATE METHODS
-    
+
     private func assembleOnboardingFlowController() {
         onboardingFlow = CNOnboardingFlowController(rootNavigation: mainRootNavigation, services: services)
         onboardingFlow?.flowDelegate = self
     }
-    
+
     private func assembleTabBarFlowControllers() {
         homeTabFlow = CNHomeTabFlowController(services: services)
         homeTabFlow?.flowDelegate = self
-        
+
         searchTabFlow = CNSearchTabFlowController(services: services)
         searchTabFlow?.flowDelegate = self
-        
+
         favoritesTabFlow = CNFavoritesTabFlowController(services: services)
         favoritesTabFlow?.flowDelegate = self
-        
+
         accountTabFlow = CNAccountTabFlowController(services: services)
         accountTabFlow?.flowDelegate = self
     }
-    
+
     private func startOnboardingFlow() {
         onboardingFlow?.start()
     }
-    
+
     private func customizeNavigationStyle() {
         mainRootNavigation?.navigationBar.backIndicatorImage = .leftArrowIcon
         mainRootNavigation?.navigationBar.backIndicatorTransitionMaskImage = .leftArrowIcon
         mainRootNavigation?.navigationBar.topItem?.backButtonTitle = ""
     }
-    
+
     private func setupTabBar() {
         assembleTabBarFlowControllers()
         tabBarController = assembleTabBar()
@@ -67,7 +67,7 @@ final class CNMainFlowController {
         navigation.navigationBar.isHidden = true
         mainRootNavigation?.setViewControllers([tabBar], animated: true)
     }
-    
+
     private func assembleTabBar() -> CNMainTabBarController {
         let tabBar = CNMainTabBarController()
         tabBar.addTab(homeTabFlow)

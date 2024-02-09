@@ -13,38 +13,38 @@ protocol CNOnboardingLoginHelpViewDelegate: AnyObject {
 }
 
 final class CNOnboardingLoginHelpView: UIView {
-    
+
     // MARK: - CONSTANTS
-    
+
     private let helpDescription = "login_help_description_text".onboardingLocalized()
     private let highlightDescription = "login_highlight_tmdb_site".onboardingLocalized()
     private let ownershipWarning = "login_help_ownership_warning".onboardingLocalized()
     private let understoodText = "common_understood_text".onboardingLocalized()
-    
+
     // MARK: - PROPERTIES
-    
+
     weak var delegate: CNOnboardingLoginHelpViewDelegate?
-    
+
     // MARK: - INITIALIZERS
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - UI
-    
+
     private lazy var tmdbIcon: UIImageView = {
         let setupComponent = UIImageView()
         setupComponent.contentMode = .scaleAspectFill
         setupComponent.image = .tmdbLogo
         return setupComponent
     }()
-    
+
     private lazy var descriptionLabel: CNHyperlinkTextView = {
         let setupComponent = CNHyperlinkTextView()
         setupComponent.text = helpDescription
@@ -54,7 +54,7 @@ final class CNOnboardingLoginHelpView: UIView {
         setupComponent.hyperlinkDelegate = self
         return setupComponent
     }()
-    
+
     private lazy var warningLabel: UILabel = {
         let setupComponent = UILabel()
         setupComponent.text = ownershipWarning
@@ -64,27 +64,27 @@ final class CNOnboardingLoginHelpView: UIView {
         setupComponent.numberOfLines = 0
         return setupComponent
     }()
-        
+
     private lazy var understoodButton: CNButton = {
         let setupComponent = CNButton(buttonType: .secondary)
         setupComponent.setTitle(understoodText, for: .normal)
         setupComponent.addTarget(self, action: #selector(didTapUnderstoodButton), for: .touchUpInside)
         return setupComponent
     }()
-    
+
     // MARK: - PRIVATE METHODS
-    
+
     @objc private func didTapUnderstoodButton() {
         delegate?.didTapUnderstoodButton()
     }
-    
+
     // MARK: - SETUP VIEW
-    
+
     private func setupView() {
         buildViewHierarchy()
         setupConstraints()
     }
-    
+
     private func buildViewHierarchy() {
         addSubviews(
             tmdbIcon,
@@ -93,7 +93,7 @@ final class CNOnboardingLoginHelpView: UIView {
             understoodButton
         )
     }
-    
+
     private func setupConstraints() {
         tmdbIcon.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(24)
@@ -101,19 +101,19 @@ final class CNOnboardingLoginHelpView: UIView {
             make.height.equalTo(20)
             make.width.equalTo(230)
         }
-        
+
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(tmdbIcon.snp.bottom).offset(24)
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().inset(16)
         }
-        
+
         warningLabel.snp.makeConstraints { make in
             make.top.equalTo(descriptionLabel.snp.bottom).offset(32)
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().inset(16)
         }
-        
+
         understoodButton.snp.makeConstraints { make in
             make.top.equalTo(warningLabel.snp.bottom).offset(32)
             make.leading.equalToSuperview().offset(16)

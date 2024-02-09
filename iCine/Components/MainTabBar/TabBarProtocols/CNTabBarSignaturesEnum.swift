@@ -12,7 +12,7 @@ enum CNTabBarSignatures {
     case search
     case favorites
     case account
-    
+
     var tabIcon: UIImage {
         switch self {
         case .home:

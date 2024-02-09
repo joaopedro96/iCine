@@ -21,7 +21,7 @@ extension CNNetworkRequestProtocol {
     var baseURL: String {
         return "https://api.themoviedb.org/3"
     }
-    
+
     var url: String {
         return baseURL + path
     }

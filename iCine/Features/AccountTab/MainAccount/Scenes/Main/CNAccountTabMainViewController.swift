@@ -8,7 +8,7 @@
 import UIKit
 
 final class CNAccountTabMainViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green

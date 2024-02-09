@@ -10,7 +10,7 @@ import Foundation
 enum CNUserDefaultsCommonsEnum: CNUserDefaultsProtocol {
     case accountID
     case sessionID
-    
+
     var key: String {
         switch self {
         case .accountID:

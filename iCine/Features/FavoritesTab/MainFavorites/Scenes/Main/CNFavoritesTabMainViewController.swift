@@ -8,7 +8,7 @@
 import UIKit
 
 final class CNFavoritesTabMainViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue

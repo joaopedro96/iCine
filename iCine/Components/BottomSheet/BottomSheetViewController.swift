@@ -10,7 +10,7 @@ import UIKit
 protocol BottomSheetProtocol: UIAdaptivePresentationControllerDelegate, AnyObject where Self: UIView { }
 
 class BottomSheetViewController: UIPresentationController {
-    
+
     // MARK: - PROPERTIES
 
     override var frameOfPresentedViewInContainerView: CGRect {
@@ -24,7 +24,7 @@ class BottomSheetViewController: UIPresentationController {
         let origin = CGPoint(x: 0, y: (containerView.bounds.height - size.height))
         return .init(origin: origin, size: size)
     }
-    
+
     private lazy var tapGesture: UITapGestureRecognizer = {
         .init(target: self, action: #selector(BottomSheetViewController.handleTapGesture))
     }()
@@ -70,7 +70,7 @@ class BottomSheetViewController: UIPresentationController {
         view.alpha = 0
         return view
     }()
-    
+
     // MARK: - PUBLIC METHODS
 
     override func containerViewDidLayoutSubviews() {
@@ -189,7 +189,7 @@ class BottomSheetViewController: UIPresentationController {
         NotificationCenter.default.removeObserver(UIResponder.keyboardWillShowNotification)
         NotificationCenter.default.removeObserver(UIResponder.keyboardWillHideNotification)
     }
-    
+
     private func getBottomSafeAreaHeight() -> CGFloat {
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene
@@ -209,19 +209,19 @@ class BottomSheetViewController: UIPresentationController {
         let remainingHeight = UIScreen.main.bounds.height - location.y
 
         switch pan.state {
-            case .began:
-                startOrigin = location
-                
-            case .changed:
-                drag(to: location)
-                
-            case .ended:
-                (remainingHeight < minHeight) ? dismiss() : present()
-                
-            default: break
+        case .began:
+            startOrigin = location
+
+        case .changed:
+            drag(to: location)
+
+        case .ended:
+            (remainingHeight < minHeight) ? dismiss() : present()
+
+        default: break
         }
     }
-    
+
     @objc func keyboardWillShow(notification: NSNotification) {
         presentedView?.removeGestureRecognizer(panGesture)
         let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height

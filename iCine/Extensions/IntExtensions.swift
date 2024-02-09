@@ -8,9 +8,9 @@
 import Foundation
 
 extension Int {
-    
+
     func asString() -> String {
         return "\(self)"
     }
-    
+
 }

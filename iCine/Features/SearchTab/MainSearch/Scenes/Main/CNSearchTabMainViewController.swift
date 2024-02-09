@@ -8,7 +8,7 @@
 import UIKit
 
 final class CNSearchTabMainViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow

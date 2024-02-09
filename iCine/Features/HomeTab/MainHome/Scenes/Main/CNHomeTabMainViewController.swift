@@ -12,18 +12,17 @@ protocol CNHomeTabMainViewControllerDelegate: AnyObject {
 }
 
 final class CNHomeTabMainViewController: UIViewController {
-    
+
     weak var flowDelegate: CNHomeTabMainViewControllerDelegate?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
-        
+
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapView)))
     }
-    
+
     @objc private func didTapView() {
         flowDelegate?.goToFavoritesTab()
     }
 }
-

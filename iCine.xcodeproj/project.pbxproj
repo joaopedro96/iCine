@@ -867,6 +867,7 @@
 				CF53C20B2ABF4FCF00E6C8A6 /* Frameworks */,
 				CF53C20C2ABF4FCF00E6C8A6 /* Resources */,
 				7EF667360673BFCE2930CD42 /* [CP] Embed Pods Frameworks */,
+				CF46E2542B759CFF00E50FE8 /* Run Script - SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -951,6 +952,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iCine/Pods-iCine-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CF46E2542B759CFF00E50FE8 /* Run Script - SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		F24B1F1E9AA568805D66EA66 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

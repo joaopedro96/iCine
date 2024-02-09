@@ -12,28 +12,28 @@ protocol CNOnboardingFlowControllerDelegate: AnyObject {
 }
 
 final class CNOnboardingFlowController {
-    
+
     // MARK: - PROPERTIES
-    
+
     weak var flowDelegate: CNOnboardingFlowControllerDelegate?
     var rootNavigation: UINavigationController?
     let factory: CNOnboardingFactory
-        
+
     // MARK: - INITIALIZERS
-    
+
     init(rootNavigation: UINavigationController?, services: CNServicesControllerProtocol) {
         self.rootNavigation = rootNavigation
         factory = CNOnboardingFactory(services: services)
     }
-    
+
     // MARK: - PUBLIC METHODS
-    
+
     func start() {
         setupRootNavigation()
     }
-    
+
     // MARK: - PRIVATE METHODS
-    
+
     private func setupRootNavigation() {
         let rootController = factory.makeOnboardingHomeViewController()
         rootController.delegate = self

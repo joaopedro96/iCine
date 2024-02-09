@@ -1,0 +1,11 @@
+disabled_rules:
+- line_length
+- void_function_in_ternary
+- control_statement
+- todo
+- type_name
+- notification_center_detachment
+
+excluded:
+- Carthage
+- Pods
